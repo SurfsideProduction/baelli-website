@@ -3,4 +3,4 @@ Allow: /
 Disallow: /ueber-mich-opt1.html
 Disallow: /ueber-mich-opt2.html
 
-Sitemap: https://surfsideproduction.github.io/baelli-website/sitemap.xml
+Sitemap: https://www.baelli.com/sitemap.xml
