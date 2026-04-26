@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markus Baelli – Hypnosetherapie, Projektberatung & Medienproduktion | baelli.com Innovations</title>
+  <meta name="description" content="Wer einmal mit mir gearbeitet hat, sieht die Dinge danach oft anders. Markus Baelli – Hypnosetherapie, Projektberatung, Multimedia. Muri AG, Schweiz.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ===== HERO QUOTE ===== */
+    .hero-quote {
+      font-size: clamp(1.6rem, 3.5vw, 3rem);
+      font-weight: 300;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      color: var(--white);
+      max-width: 860px;
+      margin: 0 auto 1.5rem;
+    }
+    .hero-quote em {
+      font-style: normal;
+      color: var(--orange-light);
+    }
+    .hero-invitation {
+      font-size: clamp(1rem, 1.8vw, 1.25rem);
+      font-weight: 300;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.75);
+      margin-top: 1.5rem;
+    }
+    .hero-byline {
+      font-size: 0.8rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-top: 1.5rem;
+    }
+
+    /* ===== MANIFESTO ===== */
+    .manifesto {
+      background: var(--dark);
+      color: var(--white);
+      padding: 8rem 2rem;
+      text-align: center;
+    }
+    .manifesto-text {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+      font-weight: 300;
+      line-height: 2;
+      color: rgba(255,255,255,0.82);
+    }
+    .manifesto-text p { margin-bottom: 1.4rem; }
+    .manifesto-text p:last-child { margin-bottom: 0; }
+    .manifesto-text strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+    .manifesto-domains {
+      margin-top: 3rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+    }
+
+    /* ===== WORLDS ===== */
+    .worlds {
+      background: var(--white);
+      padding: 7rem 2rem;
+    }
+    .worlds-inner {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    .section-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 3.5rem;
+    }
+    .world-item {
+      display: grid;
+      grid-template-columns: 260px 1fr 30px;
+      align-items: baseline;
+      gap: 2.5rem;
+      padding: 2.2rem 0;
+      border-top: 1px solid #e5e5e5;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s;
+    }
+    .world-item:last-child { border-bottom: 1px solid #e5e5e5; }
+    .world-item:hover .world-title { color: var(--orange); }
+    .world-item:hover .world-arrow { transform: translateX(6px); color: var(--orange); }
+    .world-title {
+      font-size: clamp(1.3rem, 2.2vw, 1.9rem);
+      font-weight: 700;
+      color: var(--black);
+      transition: color 0.2s;
+      line-height: 1.2;
+    }
+    .world-desc {
+      font-size: 0.97rem;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+    .world-arrow {
+      font-size: 1.1rem;
+      color: #d0d0d0;
+      transition: all 0.2s;
+      justify-self: end;
+    }
+
+    /* ===== HIGHLIGHTS ===== */
+    .highlights {
+      background: #f7f7f7;
+      padding: 7rem 2rem;
+    }
+    .highlights-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .highlight-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-bottom: 6rem;
+    }
+    .highlight-item:last-child { margin-bottom: 0; }
+    .highlight-item.reverse { direction: rtl; }
+    .highlight-item.reverse > * { direction: ltr; }
+    .highlight-img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+    }
+    .highlight-tag {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.9rem;
+    }
+    .highlight-title {
+      font-size: clamp(1.2rem, 2vw, 1.55rem);
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+    .highlight-text {
+      font-size: 0.95rem;
+      color: var(--gray);
+      line-height: 1.75;
+      margin-bottom: 1.4rem;
+    }
+
+    /* ===== INVITATION ===== */
+    .invitation {
+      background: var(--black);
+      color: var(--white);
+      padding: 9rem 2rem;
+      text-align: center;
+    }
+    .invitation-text {
+      max-width: 680px;
+      margin: 0 auto 3.5rem;
+      font-size: clamp(1.2rem, 2.2vw, 1.75rem);
+      font-weight: 300;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.88);
+    }
+    .invitation-text strong {
+      color: var(--orange-light);
+      font-weight: 600;
+    }
+    .contact-row {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .contact-row a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 0.75rem 2rem;
+      border: 1px solid rgba(255,255,255,0.25);
+      letter-spacing: 0.05em;
+      transition: all 0.2s;
+    }
+    .contact-row a:hover {
+      border-color: var(--orange);
+      color: var(--orange);
+    }
+
+    /* ===== PHOTO LINK ===== */
+    .photo-link-section {
+      background: var(--white);
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    .photo-link {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+      text-decoration: none;
+    }
+    .photo-link img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      filter: grayscale(20%);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    }
+    .photo-link:hover img {
+      transform: scale(1.04);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    }
+    .photo-link span {
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--orange);
+      transition: color 0.2s;
+    }
+    .photo-link:hover span { color: var(--orange-light); }
+
+    /* ===== FADE IN ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .fade-in:nth-child(2) { transition-delay: 0.1s; }
+    .fade-in:nth-child(3) { transition-delay: 0.2s; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .world-item {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+      }
+      .world-arrow { display: none; }
+      .highlight-item,
+      .highlight-item.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+        gap: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo" aria-label="baelli.com Innovations">
+      <svg width="180" height="44" viewBox="0 0 180 44" xmlns="http://www.w3.org/2000/svg">
+        <text x="0" y="36" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="42" fill="#C87A28">b</text>
+        <text x="30" y="24" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="14" fill="#ffffff">baelli.com</text>
+        <text x="30" y="38" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="400" font-size="9.5" letter-spacing="2" fill="#C87A28">INNOVATIONS</text>
+      </svg>
+    </a>
+    <div class="nav-toggle" id="navToggle" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Start</a></li>
+      <li><a href="https://www.hypnozoom.ch" target="_blank">Hypnosetherapie</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="ueber-mich.html">Über mich</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-quote">„Wer einmal mit mir gearbeitet hat,<br>sieht die Dinge danach <em>oft anders.</em>"</p>
+      <p class="hero-invitation">Tauchen Sie ein in das Meer der Möglichkeiten.</p>
+      <p class="hero-byline">Markus Baelli &nbsp;·&nbsp; Muri AG &nbsp;·&nbsp; Schweiz</p>
+      <a href="#manifesto" class="hero-scroll">↓</a>
+    </div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section class="manifesto" id="manifesto">
+    <div class="manifesto-text fade-in">
+      <p>Ich bin kein Spezialist. Das war nie mein Ziel.</p>
+      <p>Mein Antrieb war immer derselbe: <strong>etwas in Bewegung bringen.</strong><br>
+         Menschen, die feststecken. Unternehmen mit Betriebsblindheit.<br>
+         Ideen, die 37 Jahre auf ihren Moment warten.</p>
+    </div>
+    <p class="manifesto-domains fade-in">TV &nbsp;·&nbsp; Videokommunikation &nbsp;·&nbsp; Hypnosetherapie &nbsp;·&nbsp; Musik &nbsp;·&nbsp; Apps</p>
+  </section>
+
+  <!-- WORLDS -->
+  <section class="worlds">
+    <div class="worlds-inner">
+      <p class="section-eyebrow fade-in">Was ich tue</p>
+
+      <a href="https://www.hypnozoom.ch" target="_blank" class="world-item fade-in">
+        <span class="world-title">Hypnose&shy;therapie</span>
+        <span class="world-desc">Menschen verändern sich von innen. Manchmal reichen wenige Stunden, um das zu lösen, woran man jahrelang festgehalten hat.</span>
+        <span class="world-arrow">→</span>
+      </a>
+
+      <a href="portfolio.html" class="world-item fade-in">
+        <span class="world-title">Kommunikation</span>
+        <span class="world-desc">Jede Produktion ist ein Massanzug – kein Projekt wie das andere. Für Standardlösungen bin ich die falsche Adresse. Wer etwas wagt, ist bei mir richtig – und dieses Vertrauen wird immer belohnt.</span>
+        <span class="world-arrow">→</span>
+      </a>
+
+      <a href="ueber-mich.html" class="world-item fade-in">
+        <span class="world-title">Projekte</span>
+        <span class="world-desc">Ich bringe den frischen Blick von aussen und stelle die Fragen, die die meisten zuletzt stellen – oder gar nicht. Alles Weitere ist projektspezifisch.</span>
+        <span class="world-arrow">→</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- PHOTO LINK -->
+  <section class="photo-link-section">
+    <a href="ueber-mich.html" class="photo-link fade-in">
+      <img src="https://image.jimcdn.com/app/cms/image/transf/none/path/s43780d12d267dcca/image/i2b1c6564cf078ccf/version/1703270280/image.jpg"
+           alt="Markus Baelli">
+      <span>Der Mensch dahinter →</span>
+    </a>
+  </section>
+
+  <!-- INVITATION -->
+  <section class="invitation">
+    <p class="invitation-text fade-in">
+      Wenn Sie das Gefühl haben,<br>
+      dass in Ihrer Situation <strong>mehr möglich wäre</strong><br>
+      als bisher gedacht –<br>
+      dann sind wir wahrscheinlich füreinander gemacht.
+    </p>
+    <div class="contact-row fade-in">
+      <a href="tel:+41565351543">☎ 056 535 15 43</a>
+      <a href="mailto:info@baelli.com">✉ info@baelli.com</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">
+      <svg width="150" height="37" viewBox="0 0 180 44" xmlns="http://www.w3.org/2000/svg">
+        <text x="0" y="36" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="42" fill="#C87A28">b</text>
+        <text x="30" y="24" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="14" fill="rgba(255,255,255,0.6)">baelli.com</text>
+        <text x="30" y="38" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="400" font-size="9.5" letter-spacing="2" fill="#C87A28">INNOVATIONS</text>
+      </svg>
+    </div>
+    <div class="footer-links">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+    <p>© 2026 baelli.com Innovations · Markus Baelli · Muri AG</p>
+  </footer>
+
+  <script>
+    // Sticky nav
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+    // Mobile nav
+    function toggleNav() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+    // Smooth scroll to manifesto
+    document.querySelector('.hero-scroll').addEventListener('click', e => {
+      e.preventDefault();
+      document.getElementById('manifesto').scrollIntoView({ behavior: 'smooth' });
+    });
+    // Fade in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

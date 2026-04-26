@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Über mich – Option 2 Atmosphärisch</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-hero {
+      position: relative;
+      height: 55vh;
+      min-height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    .page-hero .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://image.jimcdn.com/app/cms/image/transf/none/path/sd1b2f6c899ce699e/backgroundarea/i76f0967dbd67d7af/version/1726951120/image.gif');
+      background-size: cover;
+      background-position: center;
+    }
+    .page-hero .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.75) 100%);
+    }
+    .page-hero-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      padding: 2rem;
+    }
+    .page-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--orange-light);
+      margin-bottom: 1.2rem;
+    }
+    .page-title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: #fff;
+    }
+    .page-title span { font-weight: 300; color: rgba(255,255,255,0.75); }
+    .page-subtitle {
+      margin-top: 1rem;
+      font-size: 0.82rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      font-weight: 300;
+    }
+
+    /* ===== ATMOSPHERIC MANIFESTO WITH PHOTO BG ===== */
+    .about-manifesto {
+      position: relative;
+      background: var(--dark);
+      padding: 8rem 2rem;
+      text-align: center;
+      overflow: hidden;
+    }
+    .about-manifesto-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://image.jimcdn.com/app/cms/image/transf/none/path/s43780d12d267dcca/image/i2b1c6564cf078ccf/version/1703270280/image.jpg');
+      background-size: cover;
+      background-position: center top;
+      opacity: 0.12;
+      filter: grayscale(100%);
+    }
+    .about-manifesto-text {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+      font-weight: 300;
+      line-height: 2;
+      color: rgba(255,255,255,0.88);
+    }
+    .about-manifesto-text p { margin-bottom: 1.3rem; }
+    .about-manifesto-text p:last-child { margin-bottom: 0; }
+    .about-manifesto-text strong { color: #fff; font-weight: 600; }
+
+    /* ===== BODY ===== */
+    .about-body {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 6rem 2rem;
+    }
+    .section-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 2.5rem;
+      display: block;
+    }
+    .about-highlight {
+      font-size: clamp(1.15rem, 2vw, 1.4rem);
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--black);
+      border-left: 3px solid var(--orange);
+      padding-left: 1.4rem;
+      margin-bottom: 1.6rem;
+    }
+    .about-body p {
+      font-size: 1rem;
+      color: var(--gray);
+      line-height: 1.85;
+      margin-bottom: 1.3rem;
+    }
+    .about-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 3rem 0 2.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid #e5e5e5;
+    }
+    .about-tags span {
+      background: transparent;
+      border: 1px solid #ddd;
+      padding: 0.35rem 0.9rem;
+      font-size: 0.8rem;
+      color: var(--gray);
+      letter-spacing: 0.03em;
+    }
+
+    /* ===== INVITATION ===== */
+    .invitation {
+      background: var(--black);
+      color: #fff;
+      padding: 9rem 2rem;
+      text-align: center;
+    }
+    .invitation-text {
+      max-width: 680px;
+      margin: 0 auto 3.5rem;
+      font-size: clamp(1.2rem, 2.2vw, 1.75rem);
+      font-weight: 300;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.88);
+    }
+    .invitation-text strong { color: var(--orange-light); font-weight: 600; }
+    .contact-row { display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap; }
+    .contact-row a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding: 0.75rem 2rem;
+      border: 1px solid rgba(255,255,255,0.25);
+      letter-spacing: 0.05em;
+      transition: all 0.2s;
+    }
+    .contact-row a:hover { border-color: var(--orange); color: var(--orange); }
+
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar" class="scrolled">
+    <a href="index.html" class="nav-logo" aria-label="baelli.com Innovations">
+      <svg width="180" height="44" viewBox="0 0 180 44" xmlns="http://www.w3.org/2000/svg">
+        <text x="0" y="36" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="42" fill="#C87A28">b</text>
+        <text x="30" y="24" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="14" fill="#ffffff">baelli.com</text>
+        <text x="30" y="38" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="400" font-size="9.5" letter-spacing="2" fill="#C87A28">INNOVATIONS</text>
+      </svg>
+    </a>
+    <div class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Start</a></li>
+      <li><a href="https://www.hypnozoom.ch" target="_blank">Hypnosetherapie</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="ueber-mich.html" class="active">Über mich</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="page-eyebrow">Der Mensch hinter baelli-innovations</p>
+      <h1 class="page-title">Markus <span>«Mege»</span> Baelli</h1>
+      <p class="page-subtitle">Visionär &nbsp;·&nbsp; Innovator &nbsp;·&nbsp; Hypnosetherapeut &nbsp;·&nbsp; Medienproduzent</p>
+    </div>
+  </section>
+
+  <!-- ATMOSPHERIC MANIFESTO: Foto als Hintergrund -->
+  <div class="about-manifesto">
+    <div class="about-manifesto-bg"></div>
+    <div class="about-manifesto-text fade-in">
+      <p>Ich bin kein Spezialist. Das war nie mein Ziel.</p>
+      <p>Mein Antrieb war immer derselbe: <strong>etwas in Bewegung bringen.</strong><br>
+         Wer einmal mit mir gearbeitet hat,<br>sieht die Dinge danach oft anders.</p>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="about-body">
+
+    <span class="section-eyebrow fade-in">Wer ich bin</span>
+
+    <div class="fade-in">
+      <p class="about-highlight">Ich bin kein Spezialist. Ich bin das Gegenteil davon – und das mit voller Überzeugung.</p>
+      <p>Die TV-Jahre bei TeleM1, TeleTell und RTL/ProSieben Schweiz waren der Anlauf. 2005 gründete ich baelli.com Videokommunikation – und führte sie 20 Jahre lang mit Projekten, die keine Schablone kannten. Dazu eine Ausbildung zum Hypnosetherapeuten, unzählige Stunden im Musikstudio, eigene Apps. Irgendwann habe ich aufgehört, mich zu erklären. Ich tue einfach, was ich sehe – und ich sehe meistens Dinge, bevor andere sie sehen.</p>
+    </div>
+
+    <div class="fade-in">
+      <p>Man nennt das eine Scannerpersönlichkeit. Viele Interessen, viele Projekte, viele Verbindungen zwischen Welten, die sich normalerweise nicht begegnen. Was mich wirklich antreibt, ist der Moment wo etwas entsteht, das vorher nicht existiert hat.</p>
+      <p>Eine App, die eine 37 Jahre alte Idee endlich ins Leben bringt. Eine Hypnosesitzung, nach der ein Mensch anders aus dem Raum geht als er hineingekommen ist. Ein Projekt, das jemanden aus dem Tunnelblick holt.</p>
+      <p>Kreativität und Vorstellungsvermögen sind meine natürlichen Werkzeuge. Ich denke in Bildern, in Möglichkeiten, in Szenarien die noch nicht existieren – und genau das macht mich zu dem, was ich bin: ein Visionär, der nicht wartet bis die Welt bereit ist, sondern einfach anfängt.</p>
+      <p>Ich arbeite am liebsten dort, wo Neugier wichtiger ist als Erfahrung und wo der Mut, über den Tellerrand zu blicken, mehr zählt als das Festhalten am Bewährten.</p>
+      <p>Details überlasse ich inzwischen gerne den Experten. Ideen haben – das bin ich.</p>
+    </div>
+
+    <div class="about-tags fade-in">
+      <span>Hypnosetherapie (OMNI)</span>
+      <span>SBVH Mitglied</span>
+      <span>TV / Fernsehen</span>
+      <span>Videokommunikation</span>
+      <span>Musikproduktion</span>
+      <span>App-Entwicklung</span>
+      <span>Projektberatung</span>
+      <span>Musikfachlehrer</span>
+      <span>Scanner-Persönlichkeit</span>
+      <span>Jurymitglied Medienpreis Nordwestschweiz</span>
+      <span>Muri AG, Schweiz</span>
+    </div>
+
+    <div class="fade-in">
+      <a href="portfolio.html" class="btn">Portfolio ansehen →</a>
+      &nbsp;
+      <a href="https://www.hypnozoom.ch" target="_blank" class="btn btn-outline">Zur Hypnosepraxis →</a>
+    </div>
+
+  </div>
+
+  <section class="invitation">
+    <p class="invitation-text fade-in">
+      Wenn Sie das Gefühl haben,<br>
+      dass in Ihrer Situation <strong>mehr möglich wäre</strong><br>
+      als bisher gedacht –<br>
+      dann sind wir wahrscheinlich füreinander gemacht.
+    </p>
+    <div class="contact-row fade-in">
+      <a href="tel:+41565351543">☎ 056 535 15 43</a>
+      <a href="mailto:info@baelli.com">✉ info@baelli.com</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">
+      <svg width="150" height="37" viewBox="0 0 180 44" xmlns="http://www.w3.org/2000/svg">
+        <text x="0" y="36" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="42" fill="#C87A28">b</text>
+        <text x="30" y="24" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="14" fill="rgba(255,255,255,0.6)">baelli.com</text>
+        <text x="30" y="38" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="400" font-size="9.5" letter-spacing="2" fill="#C87A28">INNOVATIONS</text>
+      </svg>
+    </div>
+    <div class="footer-links">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+    <p>© 2026 baelli.com Innovations · Markus Baelli · Muri AG</p>
+  </footer>
+
+  <script>
+    function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
