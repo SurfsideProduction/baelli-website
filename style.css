@@ -88,7 +88,7 @@ nav.scrolled { background: rgba(0,0,0,0.95); }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://image.jimcdn.com/app/cms/image/transf/none/path/sd1b2f6c899ce699e/backgroundarea/i76f0967dbd67d7af/version/1726951120/image.gif');
+  background-image: url('images/background.gif');
   background-size: cover;
   background-position: center;
 }
