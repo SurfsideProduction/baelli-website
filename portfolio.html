@@ -126,6 +126,9 @@
       pointer-events: none;
     }
     .portfolio-item:hover::after { opacity: 0; }
+    @media (hover: none) {
+      .portfolio-item::after { display: none; }
+    }
     .portfolio-caption {
       position: absolute;
       bottom: 0; left: 0; right: 0;
