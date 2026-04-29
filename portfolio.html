@@ -220,9 +220,10 @@
     .audio-play-btn.playing { opacity: 1; background: rgba(200, 122, 40, 1); }
     .audio-play-btn svg { fill: #fff; width: 20px; height: 20px; }
     @media (hover: none) {
-      .audio-play-btn { opacity: 1; width: 40px; height: 40px; }
+      .audio-play-btn { width: 40px; height: 40px; }
       .audio-play-btn svg { width: 16px; height: 16px; }
     }
+    .portfolio-item.audio-revealed .audio-play-btn { opacity: 1; }
 
     @media (max-width: 768px) {
       .portfolio-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
@@ -696,6 +697,30 @@
         btn.dataset.audio = audio.id;
       }
     });
+
+    // Mobile Easter Egg: erstes Tippen zeigt Play-Button, zweites spielt ab
+    const isTouchDevice = window.matchMedia('(hover: none)').matches;
+    if (isTouchDevice) {
+      document.querySelectorAll('.portfolio-item').forEach(item => {
+        if (!item.querySelector('audio')) return;
+        item.addEventListener('click', function(e) {
+          if (!this.classList.contains('audio-revealed')) {
+            e.stopPropagation();
+            document.querySelectorAll('.portfolio-item.audio-revealed').forEach(i => {
+              i.classList.remove('audio-revealed');
+            });
+            this.classList.add('audio-revealed');
+          }
+        });
+      });
+
+      // Ausserhalb tippen → Button wieder verstecken
+      document.addEventListener('click', () => {
+        document.querySelectorAll('.portfolio-item.audio-revealed').forEach(i => {
+          i.classList.remove('audio-revealed');
+        });
+      });
+    }
   </script>
 
 </body>
