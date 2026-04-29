@@ -116,6 +116,16 @@
       display: block;
     }
     .portfolio-item:hover img { transform: scale(1.05); }
+    .portfolio-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(200, 122, 40, 0.32);
+      mix-blend-mode: multiply;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+    .portfolio-item:hover::after { opacity: 0; }
     .portfolio-caption {
       position: absolute;
       bottom: 0; left: 0; right: 0;
@@ -427,6 +437,7 @@
     <div class="portfolio-item">
       <img src="images/portfolio/wasserstoff-tv-videoproduktion-energie-innovation-baelli-com-innovations.jpg"
            alt="Wasserstoff TV – Videoproduktion Energie & Innovation" loading="lazy">
+      <a href="https://www.youtube.com/@WasserstoffTV/videos" target="_blank" rel="noopener noreferrer" class="item-link" aria-label="Wasserstoff TV – YouTube Kanal"></a>
       <div class="portfolio-caption">Wasserstoff TV – Energie & Innovation</div>
     </div>
 
