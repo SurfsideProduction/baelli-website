@@ -391,7 +391,7 @@
     <div class="portfolio-item">
       <img src="images/portfolio/the-captchas-musikprojekt-und-produktion-baelli-com-innovations.jpg"
            alt="The Captchas – Studiomusiker" loading="lazy">
-      <audio id="audio-captchas" src="audio/mad-world-captchas.mp3" preload="none"></audio>
+      <audio id="audio-captchas" src="audio/mad-world-captchas.mp3" preload="none" playsinline></audio>
       <button class="audio-play-btn" onclick="toggleAudio('audio-captchas', this)" aria-label="Musikvorschau abspielen">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
       </button>
@@ -456,7 +456,7 @@
     <div class="portfolio-item">
       <img src="images/portfolio/the-man-amplifier-musikproduktion-im-studio.jpg"
            alt="The Man Amplifier – Musikproduktion im Studio" loading="lazy">
-      <audio id="audio-manamplifier" src="audio/saving-man-amplifier.mp3" preload="none"></audio>
+      <audio id="audio-manamplifier" src="audio/saving-man-amplifier.mp3" preload="none" playsinline></audio>
       <button class="audio-play-btn" onclick="toggleAudio('audio-manamplifier', this)" aria-label="Musikvorschau abspielen">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
       </button>
@@ -645,37 +645,57 @@
     const PLAY_ICON  = '<path d="M8 5v14l11-7z"/>';
     const PAUSE_ICON = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
 
-    function toggleAudio(audioId, btn) {
-      const audio = document.getElementById(audioId);
-      const allAudios = document.querySelectorAll('audio');
-      const allBtns   = document.querySelectorAll('.audio-play-btn');
+    function setBtn(btn, isPlaying) {
+      btn.querySelector('svg').innerHTML = isPlaying ? PAUSE_ICON : PLAY_ICON;
+      btn.classList.toggle('playing', isPlaying);
+    }
 
-      // Alle anderen stoppen
-      allAudios.forEach((a, i) => {
-        if (a.id !== audioId && !a.paused) {
+    function stopAll(exceptId) {
+      document.querySelectorAll('audio').forEach(a => {
+        if (a.id !== exceptId && !a.paused) {
           a.pause();
           a.currentTime = 0;
-          allBtns[i].classList.remove('playing');
-          allBtns[i].querySelector('svg').innerHTML = PLAY_ICON;
+          const b = document.querySelector('[data-audio="' + a.id + '"]');
+          if (b) setBtn(b, false);
         }
       });
+    }
 
-      if (audio.paused) {
-        audio.play();
-        btn.classList.add('playing');
-        btn.querySelector('svg').innerHTML = PAUSE_ICON;
-      } else {
+    function toggleAudio(audioId, btn) {
+      event.stopPropagation();
+      const audio = document.getElementById(audioId);
+
+      if (!audio.paused) {
         audio.pause();
-        btn.classList.remove('playing');
-        btn.querySelector('svg').innerHTML = PLAY_ICON;
+        setBtn(btn, false);
+        return;
       }
 
-      // Am Ende zurücksetzen
-      audio.onended = () => {
-        btn.classList.remove('playing');
-        btn.querySelector('svg').innerHTML = PLAY_ICON;
-      };
+      stopAll(audioId);
+
+      const promise = audio.play();
+      if (promise !== undefined) {
+        promise.then(() => {
+          setBtn(btn, true);
+        }).catch(() => {
+          // iOS blockiert manchmal beim ersten Mal – nochmal versuchen
+          audio.load();
+          audio.play().then(() => setBtn(btn, true)).catch(() => {});
+        });
+      } else {
+        setBtn(btn, true);
+      }
+
+      audio.onended = () => setBtn(btn, false);
     }
+
+    // data-audio Attribut für stopAll-Referenz setzen
+    document.querySelectorAll('.audio-play-btn').forEach(btn => {
+      const audio = btn.previousElementSibling;
+      if (audio && audio.tagName === 'AUDIO') {
+        btn.dataset.audio = audio.id;
+      }
+    });
   </script>
 
 </body>
