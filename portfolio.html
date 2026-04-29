@@ -120,7 +120,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(200, 122, 40, 0.32);
+      background: rgba(200, 122, 40, 0.18);
       mix-blend-mode: multiply;
       transition: opacity 0.4s ease;
       pointer-events: none;
@@ -339,8 +339,12 @@
 
     <div class="portfolio-item">
       <img src="images/portfolio/mäggi-und-die-brigitten-musikproduktion-champagner-strichnin.jpg"
-           alt="Mäggi und die Brigitten – Musiker Album Champagner & Strichnin" loading="lazy">
-      <div class="portfolio-caption">Mäggi und die Brigitten – Musiker Album Champagner & Strichnin</div>
+           alt="Mäggi und die Brigitten – Bandmitglied" loading="lazy">
+      <audio id="audio-maeggi" src="audio/schlauchfrei.mp3" preload="none" playsinline></audio>
+      <button class="audio-play-btn" onclick="toggleAudio('audio-maeggi', this)" aria-label="Musikvorschau abspielen">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+      <div class="portfolio-caption">Mäggi und die Brigitten – Bandmitglied</div>
     </div>
 
     <div class="portfolio-item">
@@ -391,12 +395,12 @@
 
     <div class="portfolio-item">
       <img src="images/portfolio/the-captchas-musikprojekt-und-produktion-baelli-com-innovations.jpg"
-           alt="The Captchas – Studiomusiker" loading="lazy">
+           alt="The Captchas – Bandmitglied" loading="lazy">
       <audio id="audio-captchas" src="audio/mad-world-captchas.mp3" preload="none" playsinline></audio>
       <button class="audio-play-btn" onclick="toggleAudio('audio-captchas', this)" aria-label="Musikvorschau abspielen">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
       </button>
-      <div class="portfolio-caption">The Captchas – Studiomusiker</div>
+      <div class="portfolio-caption">The Captchas – Bandmitglied</div>
     </div>
 
     <div class="portfolio-item">
@@ -456,12 +460,12 @@
 
     <div class="portfolio-item">
       <img src="images/portfolio/the-man-amplifier-musikproduktion-im-studio.jpg"
-           alt="The Man Amplifier – Musikproduktion im Studio" loading="lazy">
+           alt="The Man Amplifier – Bandmitglied" loading="lazy">
       <audio id="audio-manamplifier" src="audio/saving-man-amplifier.mp3" preload="none" playsinline></audio>
       <button class="audio-play-btn" onclick="toggleAudio('audio-manamplifier', this)" aria-label="Musikvorschau abspielen">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
       </button>
-      <div class="portfolio-caption">The Man Amplifier – Musikproduktion</div>
+      <div class="portfolio-caption">The Man Amplifier – Bandmitglied</div>
     </div>
 
     <div class="portfolio-item">
