@@ -9,10 +9,10 @@
   <style>
     /* ===== HERO QUOTE ===== */
     .hero-quote {
-      font-size: clamp(1.6rem, 3.5vw, 3rem);
-      font-weight: 300;
-      line-height: 1.35;
-      letter-spacing: -0.01em;
+      font-size: clamp(2rem, 5vw, 4rem);
+      font-weight: 200;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
       color: var(--white);
       max-width: 860px;
       margin: 0 auto 1.5rem;
@@ -21,19 +21,23 @@
       font-style: normal;
       color: var(--orange-light);
     }
-    .hero-invitation {
-      font-size: clamp(1rem, 1.8vw, 1.25rem);
-      font-weight: 300;
-      letter-spacing: 0.06em;
-      color: rgba(255,255,255,0.75);
-      margin-top: 1.5rem;
-    }
     .hero-byline {
       font-size: 0.8rem;
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: rgba(255,255,255,0.45);
-      margin-top: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    /* ===== MANIFESTO OPENER ===== */
+    .manifesto-opener {
+      max-width: 720px;
+      margin: 0 auto 3.5rem;
+      font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+      font-weight: 300;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.78);
+      text-align: center;
     }
 
     /* ===== MANIFESTO ===== */
@@ -49,7 +53,7 @@
       font-size: clamp(1.05rem, 1.8vw, 1.35rem);
       font-weight: 300;
       line-height: 2;
-      color: rgba(255,255,255,0.82);
+      color: rgba(255,255,255,0.65);
     }
     .manifesto-text p { margin-bottom: 1.4rem; }
     .manifesto-text p:last-child { margin-bottom: 0; }
@@ -59,13 +63,24 @@
     }
     .manifesto-domains {
       margin-top: 3rem;
-      font-size: clamp(1rem, 1.6vw, 1.25rem);
+      font-size: clamp(0.9rem, 1.4vw, 1.1rem);
       letter-spacing: 0.01em;
       text-transform: none;
-      color: rgba(255,255,255,0.65);
+      color: rgba(255,255,255,0.38);
       font-weight: 300;
       line-height: 2;
       font-style: italic;
+    }
+
+    /* ===== ANTENNA BRIDGE ===== */
+    .antenna-bridge {
+      max-width: 620px;
+      margin: 0 auto 3.5rem;
+      font-size: clamp(1rem, 1.6vw, 1.2rem);
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--gray);
+      text-align: center;
     }
 
     /* ===== WORLDS ===== */
@@ -340,8 +355,7 @@
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-quote">„Wer einmal mit mir gearbeitet hat,<br>sieht die Dinge danach <em>oft anders.</em>"</p>
-      <p class="hero-invitation">Tauchen Sie ein in das Meer der Möglichkeiten.</p>
+      <p class="hero-quote">Im Rauschen ist <em>alles möglich.</em></p>
       <p class="hero-byline">Markus Baelli &nbsp;·&nbsp; Muri AG &nbsp;·&nbsp; Schweiz</p>
       <a href="#manifesto" class="hero-scroll">↓</a>
     </div>
@@ -349,19 +363,18 @@
 
   <!-- MANIFESTO -->
   <section class="manifesto" id="manifesto">
+    <p class="manifesto-opener fade-in">Wer einmal mit mir gearbeitet hat,<br>sieht die Dinge danach oft anders.</p>
     <div class="manifesto-text fade-in">
-      <p>Ich bin kein Spezialist. Das war nie mein Ziel.</p>
       <p>Mein Antrieb war immer derselbe: <strong>etwas in Bewegung bringen.</strong><br>
          Menschen, die feststecken. Unternehmen mit Betriebsblindheit.<br>
          Ideen, die jahrelang auf ihren Moment warten.</p>
     </div>
-    <p class="manifesto-domains fade-in"><em>Als Videoproduzent arbeite ich mit Bildern nach aussen.<br>Als Hypnosetherapeut mit Bildern nach innen.<br>Ich brauche dazu nicht mal mehr eine Kamera.</em></p>
   </section>
 
   <!-- WORLDS -->
   <section class="worlds">
     <div class="worlds-inner">
-      <p class="section-eyebrow fade-in">Was ich tue</p>
+      <p class="antenna-bridge fade-in"><em>Vielleicht bin ich einfach eine gute Antenne für Kreativität.<br>Das würde erklären, warum sich keins meiner Projekte anfühlt wie das andere.</em></p>
 
       <a href="portfolio.html" class="world-item fade-in">
         <span class="world-title">Projekte</span>
