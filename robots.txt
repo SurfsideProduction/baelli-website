@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.baelli.com/sitemap.xml
+Sitemap: https://baelli.com/sitemap.xml
