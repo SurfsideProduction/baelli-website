@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /ueber-mich-opt1.html
-Disallow: /ueber-mich-opt2.html
 
 Sitemap: https://www.baelli.com/sitemap.xml
