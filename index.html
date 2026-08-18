@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Markus Baelli – Prozessoptimierung mit KI, Hypnosetherapie & Medienproduktion | baelli.com Innovations</title>
-  <meta name="description" content="Ich optimiere Abläufe in Unternehmen – mit frischem Blick und neuer Technologie wie KI. Markus Baelli: Prozessoptimierung, Hypnosetherapie & Medienproduktion. Muri AG, Schweiz.">
+  <title>Prozesse mit KI vereinfachen – für KMU | Markus Baelli, baelli.com Innovations</title>
+  <meta name="description" content="Ich zeige KMU, welche Abläufe sich mit heutigen KI-Werkzeugen vereinfachen lassen – und baue die Lösung mit Ihnen. Markus Baelli, Muri AG, Schweiz.">
   <link rel="stylesheet" href="style.css">
   <style>
     /* ===== HERO QUOTE ===== */
@@ -84,6 +84,157 @@
       font-style: italic;
     }
 
+    /* ===== PROOF (Was das konkret heisst) ===== */
+    .proof {
+      background: var(--white);
+      padding: 7rem 2rem;
+    }
+    .proof-inner {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    .proof-lead {
+      font-size: clamp(1.15rem, 2.1vw, 1.5rem);
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--black);
+      max-width: 720px;
+      margin-bottom: 3.5rem;
+    }
+    .proof-item {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 2rem;
+      padding: 2rem 0;
+      border-top: 1px solid #e5e5e5;
+    }
+    .proof-item:last-of-type { border-bottom: 1px solid #e5e5e5; }
+    .proof-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--black);
+      line-height: 1.4;
+    }
+    .proof-name a {
+      color: var(--black);
+      text-decoration: none;
+      border-bottom: 1px solid var(--orange);
+    }
+    .proof-name a:hover { color: var(--orange); }
+    .proof-name small {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-top: 0.35rem;
+    }
+    .proof-desc {
+      font-size: 0.97rem;
+      color: var(--gray);
+      line-height: 1.75;
+    }
+    .proof-zentrale {
+      margin-top: 2.5rem;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #555;
+      max-width: 720px;
+    }
+    .proof-closer {
+      margin-top: 3.5rem;
+      max-width: 720px;
+      font-size: clamp(1.05rem, 1.9vw, 1.35rem);
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--black);
+    }
+    .proof-closer strong { font-weight: 700; }
+
+    /* ===== ANGEBOT ===== */
+    .angebot {
+      background: #f7f7f7;
+      padding: 7rem 2rem;
+    }
+    .angebot-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+    .angebot-title {
+      font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+      font-weight: 200;
+      line-height: 1.35;
+      color: var(--black);
+      max-width: 720px;
+      margin-bottom: 1.2rem;
+    }
+    .angebot-sub {
+      font-size: 1rem;
+      color: var(--gray);
+      max-width: 640px;
+      line-height: 1.8;
+      margin-bottom: 3.5rem;
+    }
+    .angebot-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1.5rem;
+    }
+    .angebot-card {
+      background: var(--white);
+      border-top: 4px solid var(--orange);
+      padding: 2.2rem 1.8rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .angebot-step {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.9rem;
+    }
+    .angebot-card h3 {
+      font-size: 1.28rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+    .angebot-card p {
+      font-size: 0.94rem;
+      color: var(--gray);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+    .angebot-meta {
+      margin-top: auto;
+      padding-top: 1.4rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--black);
+      letter-spacing: 0.02em;
+    }
+    .angebot-erst {
+      margin-top: 0.9rem;
+      font-size: 0.8rem;
+      line-height: 1.6;
+      color: #6a6a6a;
+      font-weight: 400;
+      border-left: 2px solid var(--orange);
+      padding-left: 0.9rem;
+    }
+    .angebot-note {
+      margin-top: 3rem;
+      max-width: 720px;
+      font-size: 1.02rem;
+      line-height: 1.8;
+      color: var(--black);
+      border-left: 3px solid var(--orange);
+      padding-left: 1.4rem;
+    }
+
     /* ===== ANTENNA BRIDGE ===== */
     .antenna-bridge {
       max-width: 620px;
@@ -152,57 +303,11 @@
       justify-self: end;
     }
 
-    /* ===== HIGHLIGHTS ===== */
-    .highlights {
-      background: #f7f7f7;
-      padding: 7rem 2rem;
-    }
-    .highlights-inner {
-      max-width: 960px;
-      margin: 0 auto;
-    }
-    .highlight-item {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-      margin-bottom: 6rem;
-    }
-    .highlight-item:last-child { margin-bottom: 0; }
-    .highlight-item.reverse { direction: rtl; }
-    .highlight-item.reverse > * { direction: ltr; }
-    .highlight-img {
-      width: 100%;
-      aspect-ratio: 16/9;
-      object-fit: cover;
-      display: block;
-    }
-    .highlight-tag {
-      font-size: 0.7rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--orange);
-      margin-bottom: 0.9rem;
-    }
-    .highlight-title {
-      font-size: clamp(1.2rem, 2vw, 1.55rem);
-      font-weight: 700;
-      color: var(--black);
-      margin-bottom: 1rem;
-      line-height: 1.3;
-    }
-    .highlight-text {
-      font-size: 0.95rem;
-      color: var(--gray);
-      line-height: 1.75;
-      margin-bottom: 1.4rem;
-    }
-
     /* ===== INVITATION ===== */
     .invitation {
       background: var(--black);
       color: var(--white);
-      padding: 9rem 2rem;
+      padding: 9rem 2rem 7rem;
       text-align: center;
     }
     .invitation-closer {
@@ -226,25 +331,95 @@
       color: var(--orange-light);
       font-weight: 600;
     }
-    .contact-row {
-      display: flex;
-      justify-content: center;
-      gap: 1.2rem;
-      flex-wrap: wrap;
+
+    /* ===== KONTAKTFORMULAR ===== */
+    .kontakt-form {
+      max-width: 560px;
+      margin: 0 auto 2.5rem;
+      text-align: left;
     }
-    .contact-row a {
-      color: rgba(255,255,255,0.8);
-      text-decoration: none;
+    .kontakt-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .kontakt-form label {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 0.45rem;
+    }
+    .kontakt-form label em { font-style: normal; text-transform: none; letter-spacing: 0; }
+    .kontakt-form input,
+    .kontakt-form textarea {
+      width: 100%;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: var(--white);
+      font-family: inherit;
       font-size: 0.95rem;
-      font-weight: 500;
-      padding: 0.75rem 2rem;
-      border: 1px solid rgba(255,255,255,0.25);
-      letter-spacing: 0.05em;
-      transition: all 0.2s;
+      padding: 0.8rem 0.9rem;
+      transition: border-color 0.2s, background 0.2s;
     }
-    .contact-row a:hover {
+    .kontakt-form input:focus,
+    .kontakt-form textarea:focus {
+      outline: none;
       border-color: var(--orange);
-      color: var(--orange);
+      background: rgba(255,255,255,0.1);
+    }
+    .kontakt-form textarea { resize: vertical; min-height: 130px; }
+    .kontakt-field { margin-bottom: 1rem; }
+    .kontakt-submit {
+      background: var(--orange);
+      color: var(--white);
+      border: none;
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.9rem 2.4rem;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .kontakt-submit:hover { background: var(--orange-light); transform: translateY(-1px); }
+    .kontakt-hinweis {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.7;
+      margin-top: 1.1rem;
+    }
+    .kontakt-hinweis a { color: rgba(255,255,255,0.7); }
+    .kontakt-status {
+      display: none;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--orange-light);
+      line-height: 1.6;
+    }
+    .kontakt-hp { position: absolute; left: -9999px; opacity: 0; }
+    .kontakt-direkt {
+      max-width: 560px;
+      margin: 0 auto;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(255,255,255,0.14);
+      font-size: 1.05rem;
+      line-height: 2;
+      color: rgba(255,255,255,0.75);
+      text-align: center;
+    }
+    .kontakt-direkt a { color: var(--orange-light); text-decoration: none; }
+    .kontakt-direkt a:hover { text-decoration: underline; }
+    .kontakt-direkt span {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 0.6rem;
     }
 
     /* ===== PHOTO LINK ===== */
@@ -304,27 +479,23 @@
       }
       .world-desc { grid-column: 2; }
       .world-arrow { display: block; font-size: 1.4rem; color: var(--orange); }
-      .highlight-item,
-      .highlight-item.reverse {
-        grid-template-columns: 1fr;
-        direction: ltr;
-        gap: 1.5rem;
-      }
+      .proof-item { grid-template-columns: 1fr; gap: 0.7rem; }
+      .kontakt-row { grid-template-columns: 1fr; }
     }
   </style>
   <meta name="google-site-verification" content="P6n1_zVhU4MIwN9poVW1xoypxf4h9SmWYmA_CE-PF7g">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://baelli.com/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Markus Baelli – Prozessoptimierung mit KI, Hypnosetherapie & Medienproduktion | baelli.com">
-  <meta property="og:description" content="Ich optimiere Abläufe in Unternehmen – mit frischem Blick und neuer Technologie wie KI. Markus Baelli: Prozessoptimierung, Hypnosetherapie & Medienproduktion. Muri AG, Schweiz.">
+  <meta property="og:title" content="Prozesse mit KI vereinfachen – für KMU | Markus Baelli, baelli.com">
+  <meta property="og:description" content="Ich zeige KMU, welche Abläufe sich mit heutigen KI-Werkzeugen vereinfachen lassen – und baue die Lösung mit Ihnen. Markus Baelli, Muri AG, Schweiz.">
   <meta property="og:url" content="https://baelli.com/">
   <meta property="og:image" content="https://baelli.com/images/markus-baelli-portrait.jpg">
   <meta property="og:locale" content="de_CH">
   <meta property="og:site_name" content="baelli.com Innovations">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Markus Baelli – Prozessoptimierung mit KI, Hypnosetherapie & Medienproduktion | baelli.com">
-  <meta name="twitter:description" content="Ich optimiere Abläufe in Unternehmen – mit frischem Blick und neuer Technologie wie KI. Markus Baelli: Prozessoptimierung, Hypnosetherapie & Medienproduktion. Muri AG, Schweiz.">
+  <meta name="twitter:title" content="Prozesse mit KI vereinfachen – für KMU | Markus Baelli, baelli.com">
+  <meta name="twitter:description" content="Ich zeige KMU, welche Abläufe sich mit heutigen KI-Werkzeugen vereinfachen lassen – und baue die Lösung mit Ihnen. Markus Baelli, Muri AG, Schweiz.">
   <meta name="twitter:image" content="https://baelli.com/images/markus-baelli-portrait.jpg">
   <script type="application/ld+json">
   {
@@ -334,7 +505,7 @@
         "@type": "Person",
         "@id": "https://baelli.com/#person",
         "name": "Markus Baelli",
-        "jobTitle": ["Medienproduzent", "Projektberater", "Hypnosetherapeut"],
+        "jobTitle": ["Prozessberater", "Medienproduzent", "Hypnosetherapeut"],
         "url": "https://baelli.com/",
         "image": "https://baelli.com/images/markus-baelli-portrait.jpg",
         "address": {
@@ -344,14 +515,33 @@
           "addressCountry": "CH"
         },
         "email": "info@baelli.com",
+        "telephone": "+41565351543",
+        "knowsAbout": ["Prozessoptimierung", "Künstliche Intelligenz im Unternehmen", "Digitalisierung für KMU", "Medienproduktion", "Hypnosetherapie"],
         "sameAs": ["https://hypnozoom.ch"]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://baelli.com/#service",
+        "name": "baelli.com Innovations",
+        "description": "Prozessberatung für kleine und mittlere Unternehmen: Abläufe analysieren, mit KI-Werkzeugen vereinfachen und Mitarbeitende befähigen.",
+        "url": "https://baelli.com/",
+        "founder": { "@id": "https://baelli.com/#person" },
+        "email": "info@baelli.com",
+        "telephone": "+41565351543",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Muri",
+          "addressRegion": "AG",
+          "addressCountry": "CH"
+        },
+        "areaServed": { "@type": "Country", "name": "Schweiz" }
       },
       {
         "@type": "WebSite",
         "@id": "https://baelli.com/#website",
         "url": "https://baelli.com/",
         "name": "baelli.com Innovations",
-        "description": "Multimedia, Projektberatung und Hypnosetherapie von Markus Baelli",
+        "description": "Prozessberatung, Medienproduktion und Hypnosetherapie von Markus Baelli",
         "inLanguage": "de-CH"
       }
     ]
@@ -374,6 +564,7 @@
     </div>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html" class="active">Start</a></li>
+      <li><a href="#fuer-unternehmen">Für Unternehmen</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="https://hypnozoom.ch" target="_blank" rel="noopener noreferrer">Hypnosetherapie</a></li>
       <li><a href="ueber-mich.html">Über mich</a></li>
@@ -404,7 +595,7 @@
     </div>
   </section>
 
-  <!-- WORLDS -->
+  <!-- PROOF -->
   <section class="worlds">
     <div class="worlds-inner">
       <p class="antenna-bridge fade-in"><em>Vielleicht bin ich einfach eine gute Antenne für Kreativität.<br>Das würde erklären, warum sich keins meiner Projekte anfühlt wie das andere.</em></p>
@@ -416,8 +607,8 @@
             <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l-.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
           </svg>
         </span>
-        <span class="world-title">Projekte</span>
-        <span class="world-desc">Ich optimiere Abläufe in Unternehmen – mit dem frischen Blick von aussen und mit neuer Technologie wie KI. Wo Prozesse feststecken, bringe ich sie wieder in Bewegung.</span>
+        <span class="world-title">Portfolio</span>
+        <span class="world-desc">Dreissig Jahre Produktionen, Kampagnen und Projekte. Die Liste dessen, was daraus entstanden ist – und woher der Blick kommt, den ich mitbringe.</span>
         <span class="world-arrow">→</span>
       </a>
 
@@ -447,6 +638,89 @@
     </div>
   </section>
 
+  <section class="proof">
+    <div class="proof-inner">
+      <p class="section-eyebrow fade-in">Was das konkret heisst</p>
+      <p class="proof-lead fade-in">In den letzten Monaten habe ich mit heutigen KI-Werkzeugen Dinge gebaut, für die es früher ein Team, ein Budget und ein halbes Jahr gebraucht hätte. Alles eigene Projekte – entstanden, weil ich wissen wollte, wie weit man damit kommt. Sie laufen.</p>
+
+      <div class="proof-item fade-in">
+        <div class="proof-name">
+          <a href="https://expresswohnung.ch" target="_blank" rel="noopener noreferrer">ExpressWohnung</a>
+          <small>Web-Anwendung</small>
+        </div>
+        <div class="proof-desc">Eine eigene Plattform für die Vermietung möblierter Wohnungen – von der ersten Skizze bis zur laufenden Seite mit eigener Domain und eigener Absenderadresse.</div>
+      </div>
+
+      <div class="proof-item fade-in">
+        <div class="proof-name">
+          <a href="https://quizwheel.ch" target="_blank" rel="noopener noreferrer">QuizWheel</a>
+          <small>Interaktives Tool</small>
+        </div>
+        <div class="proof-desc">Ein digitales Glücksrad für Messen, Events und Promotionen. Spielmechanik, Gestaltung und Auftritt – alles selbst gebaut, nichts von der Stange.</div>
+      </div>
+
+      <div class="proof-item fade-in">
+        <div class="proof-name">
+          Zwei Websites
+          <small>samt E-Mail-Infrastruktur</small>
+        </div>
+        <div class="proof-desc">baelli.com und hypnozoom.ch komplett neu aufgebaut – inklusive Umzug der Domains und einer E-Mail-Einrichtung, bei der geprüft ist, dass niemand in fremdem Namen schreiben kann.</div>
+      </div>
+
+      <div class="proof-item fade-in">
+        <div class="proof-name">
+          Administration
+          <small>Buchhaltung, Formulare, Abläufe</small>
+        </div>
+        <div class="proof-desc">Meine eigene Buchhaltung von Grund auf neu organisiert – nicht durch ein neues Programm, sondern durch einen Ablauf, den ich auch im Dezember noch verstehe. Genauso das Aufnahmeformular meiner Praxis: Es liess sich unterwegs nicht sauber ausfüllen und lieferte Angaben, mit denen ich in der Arbeit wenig anfangen konnte. Heute ist es auf dem Tablet in einem Zug ausgefüllt – und liefert genau das, womit ich weiterarbeite.</div>
+      </div>
+
+      <p class="proof-zentrale fade-in">Und darüber eine Ebene, die alles zusammenhält: eine Ordnung, die ich mir selbst gebaut habe. Strategie, Finanzen und Behördenkram laufen an einem Ort zusammen, und jedes Projekt darunter hat seinen klar abgegrenzten Platz. Nichts vermischt sich, nichts geht verloren.</p>
+
+      <p class="proof-closer fade-in">Ich habe dafür nicht programmieren gelernt. Ich habe gelernt, die <strong>richtigen Fragen zu stellen</strong> – und hartnäckig zu bleiben, bis etwas wirklich funktioniert. Genau das bringe ich in Ihr Unternehmen.</p>
+    </div>
+  </section>
+
+  <!-- ANGEBOT -->
+  <section class="angebot" id="fuer-unternehmen">
+    <div class="angebot-inner">
+      <p class="section-eyebrow fade-in">Für Unternehmen</p>
+      <h2 class="angebot-title fade-in">Ich schlage den Weg frei. Sie bauen ihn aus.</h2>
+      <p class="angebot-sub fade-in">In jedem Betrieb gibt es Abläufe, über die sich intern niemand mehr wundert – weil sie schon immer so waren. Von aussen sieht man sie sofort. Drei Wege, wie wir zusammenarbeiten können:</p>
+
+      <div class="angebot-grid">
+        <div class="angebot-card fade-in">
+          <p class="angebot-step">Schritt 1</p>
+          <h3>Der Blick von aussen</h3>
+          <p>Ein halber Tag in Ihrem Betrieb. Wir gehen gemeinsam durch, was täglich Zeit frisst: Offerten, Rapporte, Terminplanung, Ablage, Mailflut.</p>
+          <p>Danach bekommen Sie eine geordnete Liste – was sich mit heutigen Mitteln vereinfachen lässt, was das jeweils bedeutet, und womit ich anfangen würde.</p>
+          <p class="angebot-meta">CHF 750 · Fixpreis · kein Folgeauftrag nötig</p>
+          <p class="angebot-erst">Einführungspreis für meine ersten Aufträge ausserhalb der eigenen Projekte. Sie bekommen dafür meine volle Aufmerksamkeit – und einen Preis, den es später nicht mehr gibt.</p>
+        </div>
+
+        <div class="angebot-card fade-in">
+          <p class="angebot-step">Schritt 2</p>
+          <h3>Prototyp statt Konzept</h3>
+          <p>Wir nehmen den Ablauf, der am meisten Ärger macht, und bauen die Lösung – nicht die Präsentation darüber.</p>
+          <p>Sie sehen in Tagen statt Monaten, ob es trägt. Was entsteht, gehört Ihnen und läuft auch ohne mich weiter.</p>
+          <p class="angebot-meta">Nach Aufwand · mit vereinbartem Kostendach</p>
+        </div>
+
+        <div class="angebot-card fade-in">
+          <p class="angebot-step">Schritt 3</p>
+          <h3>Ihr Team an Bord</h3>
+          <p>Ein Workshop für die Leute, die täglich damit arbeiten – an Ihren echten Aufgaben, nicht an Beispielen aus dem Lehrbuch.</p>
+          <p>Danach können sie es selbst, ohne bei jeder Kleinigkeit jemanden rufen zu müssen.</p>
+          <p class="angebot-meta">Halber oder ganzer Tag · in Ihren Räumen</p>
+        </div>
+      </div>
+
+      <p class="angebot-note fade-in">Kein Abo, keine Lizenz, kein Werkzeug, das Sie an mich bindet. Wenn Sie mich danach nicht mehr brauchen, habe ich meine Arbeit gut gemacht.</p>
+    </div>
+  </section>
+
+  <!-- WORLDS -->
+
   <!-- PHOTO LINK -->
   <section class="photo-link-section">
     <a href="ueber-mich.html" class="photo-link fade-in">
@@ -457,7 +731,7 @@
   </section>
 
   <!-- INVITATION -->
-  <section class="invitation">
+  <section class="invitation" id="kontakt">
     <p class="invitation-closer fade-in">Wer einmal mit mir gearbeitet hat,<br>sieht die Dinge danach oft anders.</p>
     <p class="invitation-text fade-in">
       Wenn Sie das Gefühl haben,<br>
@@ -465,9 +739,39 @@
       als bisher gedacht –<br>
       dann sind wir wahrscheinlich füreinander gemacht.
     </p>
-    <div class="contact-row fade-in">
-      <a href="tel:+41565351543">Anrufen</a>
-      <a href="mailto:info@baelli.com">Mail</a>
+
+      <form class="kontakt-form fade-in" id="kontaktForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="c4b893e8-f8b6-495e-836f-3f0a6391dc1b">
+      <input type="hidden" name="subject" value="Neue Anfrage über baelli.com">
+      <input type="hidden" name="from_name" value="baelli.com Kontaktformular">
+      <input type="checkbox" name="botcheck" class="kontakt-hp" tabindex="-1" autocomplete="off">
+      <div class="kontakt-row">
+        <div>
+          <label for="kf-name">Name</label>
+          <input type="text" id="kf-name" name="name" autocomplete="name" required>
+        </div>
+        <div>
+          <label for="kf-firma">Firma <em>(optional)</em></label>
+          <input type="text" id="kf-firma" name="firma" autocomplete="organization">
+        </div>
+      </div>
+      <div class="kontakt-field">
+        <label for="kf-mail">E-Mail</label>
+        <input type="email" id="kf-mail" name="email" autocomplete="email" required>
+      </div>
+      <div class="kontakt-field">
+        <label for="kf-text">Worum geht es?</label>
+        <textarea id="kf-text" name="nachricht" required></textarea>
+      </div>
+      <button type="submit" class="kontakt-submit">Nachricht senden</button>
+      <p class="kontakt-status" id="kontaktStatus" role="status" aria-live="polite"></p>
+      <p class="kontakt-hinweis">Ihre Angaben verwende ich ausschliesslich, um Ihre Anfrage zu beantworten. Näheres in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+    </form>
+
+    <div class="kontakt-direkt fade-in">
+      <span>Oder direkt</span>
+      <a href="tel:+41565351543">+41 56 535 15 43</a><br>
+      <a href="mailto:info@baelli.com">info@baelli.com</a>
     </div>
   </section>
 
@@ -501,6 +805,57 @@
       e.preventDefault();
       document.getElementById('manifesto').scrollIntoView({ behavior: 'smooth' });
     });
+    // Kontaktformular: ohne Seitenwechsel senden, mit Rückmeldung
+    (function () {
+      const form = document.getElementById('kontaktForm');
+      const status = document.getElementById('kontaktStatus');
+      const button = form.querySelector('.kontakt-submit');
+      const key = form.querySelector('input[name="access_key"]').value;
+      const geladen = Date.now();
+      let laeuft = false;
+      const FEHLER = 'Das Senden hat leider nicht geklappt. Bitte rufen Sie an oder schreiben Sie an info@baelli.com – beides steht direkt darunter.';
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (laeuft) return;
+        status.style.display = 'block';
+
+        if (key.indexOf('EINSETZEN') !== -1) {
+          status.textContent = 'Der Formularversand ist noch nicht aktiviert. Bitte nutzen Sie so lange Telefon oder E-Mail – beides steht direkt darunter.';
+          return;
+        }
+        // Zeitfalle: ein ausgefülltes Formular in unter drei Sekunden ist kein Mensch.
+        if (Date.now() - geladen < 3000) {
+          status.textContent = 'Einen kurzen Moment bitte – und dann nochmals auf «Nachricht senden».';
+          return;
+        }
+
+        laeuft = true;
+        button.disabled = true;
+        status.textContent = 'Wird gesendet …';
+
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form)
+        })
+          .then(r => r.json())
+          .then(d => {
+            if (d && d.success) {
+              form.reset();
+              status.textContent = 'Danke – Ihre Nachricht ist angekommen. Ich melde mich in der Regel innert eines Arbeitstages.';
+            } else {
+              status.textContent = FEHLER;
+              button.disabled = false;
+              laeuft = false;
+            }
+          })
+          .catch(() => {
+            status.textContent = FEHLER;
+            button.disabled = false;
+            laeuft = false;
+          });
+      });
+    })();
     // Fade in on scroll
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
