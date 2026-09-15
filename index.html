@@ -573,7 +573,11 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-bg"></div>
+    <video class="hero-bg" autoplay muted loop playsinline preload="metadata"
+           poster="images/background-poster.jpg" aria-hidden="true">
+      <source src="images/background.webm" type="video/webm">
+      <source src="images/background.mp4" type="video/mp4">
+    </video>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <p class="hero-quote">Im Rauschen ist <em>alles möglich.</em></p>
