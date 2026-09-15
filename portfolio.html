@@ -21,9 +21,15 @@
     .page-hero .hero-bg {
       position: absolute;
       inset: 0;
-      background-image: url('images/background.gif');
-      background-size: cover;
-      background-position: center;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 0;
+      background: url('images/background-poster.jpg') center / cover no-repeat;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .page-hero .hero-bg { display: none; }
+      .page-hero { background: url('images/background-poster.jpg') center / cover no-repeat; }
     }
     .page-hero .hero-overlay {
       position: absolute;
@@ -106,8 +112,9 @@
       overflow: hidden;
       aspect-ratio: 16/9;
       background: #222;
-      cursor: pointer;
+      cursor: default;
     }
+    .portfolio-item.is-clickable { cursor: pointer; }
     .portfolio-item img {
       width: 100%;
       height: 100%;
@@ -230,6 +237,24 @@
       .portfolio-item { aspect-ratio: 4/3; }
       .portfolio-caption { transform: translateY(0); font-size: 0.72rem; }
     }
+    /* ===== BLOCK-ÜBERSCHRIFTEN (Entwurf 14.09.2026) ===== */
+    .grid-label-wrap.section-block { padding: 3.2rem 2rem 0.6rem; }
+    .block-title {
+      font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--black);
+      letter-spacing: -0.01em;
+    }
+    .block-title::after {
+      content: ""; display: block; width: 46px; height: 2px;
+      background: var(--orange); margin-top: 0.9rem;
+    }
+    .portfolio-grid { padding-bottom: 2rem; }
+    .portfolio-grid:last-of-type { padding-bottom: 6rem; }
+    @media (max-width: 768px) {
+      .grid-label-wrap.section-block { padding: 2.4rem 1.2rem 1rem; }
+    }
   </style>
   <meta name="google-site-verification" content="P6n1_zVhU4MIwN9poVW1xoypxf4h9SmWYmA_CE-PF7g">
   <meta name="robots" content="index, follow">
@@ -255,6 +280,247 @@
     "author": {
       "@type": "Person",
       "name": "Markus Baelli"
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "numberOfItems": 44,
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "expresswohnung.ch – App-Entwicklung & Innovation",
+          "url": "https://www.expresswohnung.ch/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "QuizWheel – Game Entwicklung",
+          "url": "https://www.quizwheel.ch/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "HypnoZoom – Hypnosetherapie Praxis",
+          "url": "https://hypnozoom.ch/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Wasserstoff TV – Podcast Produzent",
+          "url": "https://www.youtube.com/@WasserstoffTV/videos"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "EMMI AG – Interne Videoreihe"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Landis + Gyr – Interne Videoreihe"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Berger Garten TV – Social Media Videoprojekt",
+          "url": "https://www.youtube.com/watch?v=PfSPfdAqXIQ"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Mercedes-Benz – Interne Videokommunikation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "SIX Group – Videokommunikation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Post Logistics – Medienproduktion"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Alpiq – Medienproduktion"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "jobs.ch – Videoproduktion"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Artoz Papier – Videoproduktion"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Coiffure Swiss – Videoproduktion"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Schweizer Messebau – Medienproduktion"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Erusbacher Bräu – Medienproduktion",
+          "url": "https://www.youtube.com/watch?v=Kh8m5-ESX_A"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Multigraf – Videoproduktion"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "AkkuPoint – Videoproduktion",
+          "url": "https://www.youtube.com/watch?v=Bd684m1hyaU"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Michel ITC – Kommunikationsprojekt"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Dynamic Steel AG – Werbespot Produktion",
+          "url": "https://youtu.be/m4CVntas0tc"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "pbr-matic AG – Kommunikationsprojekt"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "S&W – Projektberatung & Medienproduktion"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Abfallhai – Kampagne für Antaswiss"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Sara macht's – TV-Produktion",
+          "url": "https://www.youtube.com/watch?v=CJkqmvn6CmI"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Aargau.TV – Medienprojekt"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Dizzy Freaky Show – Produzent Musiksendung",
+          "url": "https://youtu.be/KmnyRGdrTIA"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "luegmol.ch – TV-Produktion & Medienarbeit"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "RTL/ProSieben Schweiz – Video Editor – TV Beiträge"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "TV Beiträge / Technik – Tele M1"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "TV Beiträge / Technik – TeleTell"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "SRF – Video Editor – Tagesschau 10vor10 Schweiz Aktuell"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Loserville – Back to the Bottom – Songwriter Musiker Audio/Video Produzent",
+          "url": "https://youtu.be/M2tl7jz1uyI"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "The Man Amplifier – Bandmitglied"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Mega Mege – Rollbrätt – Songwriter Musiker Produzent",
+          "url": "https://open.spotify.com/intl-de/track/0Ld5raNN2bSLqH6HPQKpmy"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "The Captchas – Bandmitglied"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Mäggi und die Brigitten – Bandmitglied"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Medienpreis Nordwestschweiz – Jury Mitglied"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Philip Galizia – Kreative Unterstützung"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Queerbeer – Kreativprojekt",
+          "url": "https://www.samueldegasne.com/article-652386.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Pirmin Breu – Kreative Unterstützung"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Syléna Vincent – Kreative Unterstützung"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Wahlvideo – Politische Videokommunikation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Politvideo – Politische Videokommunikation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Gemeinde Hünenberg – Kommunikationsprojekt",
+          "url": "https://www.youtube.com/watch?v=zKBa3ET8GZs"
+        }
+      ]
     }
   }
   </script>
@@ -284,7 +550,11 @@
 
   <!-- HERO -->
   <section class="page-hero">
-    <div class="hero-bg"></div>
+    <video class="hero-bg" autoplay muted loop playsinline preload="metadata"
+           poster="images/background-poster.jpg" aria-hidden="true">
+      <source src="images/background.webm" type="video/webm">
+      <source src="images/background.mp4" type="video/mp4">
+    </video>
     <div class="hero-overlay"></div>
     <div class="page-hero-content">
       <p class="page-eyebrow">Ausgewählte Arbeiten</p>
@@ -297,147 +567,94 @@
     <div class="portfolio-manifesto-text fade-in">
       <p>Das war nie mein Ding.</p>
       <p>Manche davon sind Aufträge, andere private Ideen, wieder andere neue Vorhaben.<br>
-      Aber alle tragen dieselbe Handschrift –<br>
-      die eines Menschen, der die Welt <strong>mit anderen Augen sieht.</strong></p>
+      Aber alle tragen <strong>dieselbe Handschrift.</strong></p>
     </div>
   </div>
 
   <!-- GRID -->
   <div class="grid-label-wrap">
-    <p class="section-eyebrow fade-in">Ausgewählte Projekte</p>
     <p class="portfolio-hint fade-in">Einige Logos verbergen ein Easter Egg — einfach ausprobieren.</p>
+  </div>
+
+  <div class="grid-label-wrap section-block">
+    <h2 class="block-title fade-in">Eigene Marken</h2>
   </div>
 
   <div class="portfolio-grid">
 
-    <div class="portfolio-item">
+    <div class="portfolio-item is-clickable">
       <img src="images/portfolio/expresswohnung-ch-app-entwicklung-und-innovation-baelli-com-innovations.png"
            alt="expresswohnung.ch – App-Entwicklung und Innovation, baelli.com Innovations" loading="lazy">
       <a href="https://www.expresswohnung.ch/" target="_blank" rel="noopener noreferrer" class="item-link" aria-label="expresswohnung.ch – App-Entwicklung und Innovation, baelli.com Innovations"></a>
       <div class="portfolio-caption">expresswohnung.ch – App-Entwicklung & Innovation</div>
     </div>
 
-    <div class="portfolio-item">
+    <div class="portfolio-item is-clickable">
       <img src="images/portfolio/quizwheel.png"
            alt="QuizWheel – App-Entwicklung, baelli.com Innovations" loading="lazy">
       <a href="https://www.quizwheel.ch/" target="_blank" rel="noopener noreferrer" class="item-link" aria-label="QuizWheel – App-Entwicklung, baelli.com Innovations"></a>
       <div class="portfolio-caption">QuizWheel – Game Entwicklung</div>
     </div>
 
-    <div class="portfolio-item">
+    <div class="portfolio-item is-clickable">
       <a href="https://hypnozoom.ch/" target="_blank" rel="noopener noreferrer" class="item-link" aria-label="HypnoZoom – Hypnosetherapie Praxis"></a>
       <img src="images/portfolio/hypnosetherapie-praxis.jpg"
            alt="HypnoZoom – Hypnosetherapie Praxis, baelli.com Innovations" loading="lazy">
       <div class="portfolio-caption">HypnoZoom – Hypnosetherapie Praxis</div>
     </div>
 
-    <div class="portfolio-item">
-      <img src="images/portfolio/medienpreis-nordwestschweiz-baelli-com-innovations.png"
-           alt="Medienpreis Nordwestschweiz – Jury Mitglied, baelli.com Innovations" loading="lazy">
-      <div class="portfolio-caption">Medienpreis Nordwestschweiz – Jury Mitglied</div>
+    <div class="portfolio-item is-clickable">
+      <img src="images/portfolio/wasserstoff-tv-videoproduktion-energie-innovation-baelli-com-innovations.jpg"
+           alt="Wasserstoff TV – Videoproduktion Energie & Innovation" loading="lazy">
+      <a href="https://www.youtube.com/@WasserstoffTV/videos" target="_blank" rel="noopener noreferrer" class="item-link" aria-label="Wasserstoff TV – YouTube Kanal"></a>
+      <div class="portfolio-caption">Wasserstoff TV – Podcast Produzent</div>
     </div>
 
-    <div class="portfolio-item">
-      <img src="images/portfolio/mäggi-und-die-brigitten-musikproduktion-champagner-strichnin.jpg"
-           alt="Mäggi und die Brigitten – Bandmitglied" loading="lazy">
-      <audio id="audio-maeggi" src="audio/schlauchfrei.mp3" preload="none" playsinline></audio>
-      <button class="audio-play-btn" onclick="toggleAudio('audio-maeggi', this)" aria-label="Musikvorschau abspielen">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
-      </button>
-      <div class="portfolio-caption">Mäggi und die Brigitten – Bandmitglied</div>
-    </div>
+  </div>
 
-    <div class="portfolio-item">
-      <img src="images/portfolio/tv-produktion-baelli-com-innovations.jpg"
-           alt="Sara macht's TV Produktion" loading="lazy">
-      <a href="https://www.youtube.com/watch?v=CJkqmvn6CmI" target="_blank" rel="noopener noreferrer" class="item-link" aria-label="TV Produktion, baelli.com Innovations"></a>
-      <div class="portfolio-caption">Sara macht's TV Produktion</div>
-    </div>
+<div class="grid-label-wrap section-block">
+    <h2 class="block-title fade-in">Firmen-Podcasts &amp; Serien</h2>
+  </div>
 
-    <div class="portfolio-item">
-      <img src="images/portfolio/kreative-unterstützung-für-künstler-philip-galizia-baelli-com-innovations.jpg"
-           alt="Kreative Unterstützung für Künstler Philip Galizia – baelli.com Innovations" loading="lazy">
-      <div class="portfolio-caption">Philip Galizia – Kreative Unterstützung</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/aargau-tv-medienprojekt-baelli-com-innovations-aargau.png"
-           alt="Aargau.TV – Medienprojekt, baelli.com Innovations Aargau" loading="lazy">
-      <div class="portfolio-caption">Aargau.TV – Medienprojekt</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/dizzy-freaky-show-tv-produktion-für-tele-m1-und-teletell.jpg"
-           alt="Dizzy Freaky Show – TV-Produktion für Tele M1 und TeleTell" loading="lazy">
-      <a href="https://youtu.be/KmnyRGdrTIA" target="_blank" rel="noopener noreferrer" class="item-link" aria-label="Dizzy Freaky Show – TV-Produktion für Tele M1 und TeleTell"></a>
-      <div class="portfolio-caption">Dizzy Freaky Show – Produzent Musiksendung</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/luegmol-ch-tv-produktion-und-medienarbeit-baelli-com-innovations.png"
-           alt="luegmol.ch – TV-Produktion und Medienarbeit, baelli.com Innovations" loading="lazy">
-      <div class="portfolio-caption">luegmol.ch – TV-Produktion & Medienarbeit</div>
-    </div>
-
-    <div class="portfolio-item">
-      <a href="https://www.samueldegasne.com/article-652386.html" target="_blank" rel="noopener noreferrer" class="item-link" aria-label="Queerbeer – Kreativprojekt"></a>
-      <img src="images/portfolio/queerbeer-kreativprojekt-baelli-com-innovations-schweiz.jpg"
-           alt="Queerbeer – Kreativprojekt, baelli.com Innovations Schweiz" loading="lazy">
-      <div class="portfolio-caption">Queerbeer – Kreativprojekt</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/mega-mege-rollbraett-cover.jpg"
-           alt="Mega Mege - Rollbrätt - Songwriter Musiker Produzent" loading="lazy">
-      <a href="https://open.spotify.com/intl-de/track/0Ld5raNN2bSLqH6HPQKpmy" target="_blank" rel="noopener noreferrer" class="item-link" aria-label="Mega Mege Rollbrätt – Kreativprojekt, baelli.com Innovations"></a>
-      <div class="portfolio-caption">Mega Mege - Rollbrätt - Songwriter Musiker Produzent</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/the-captchas-musikprojekt-und-produktion-baelli-com-innovations.jpg"
-           alt="The Captchas – Bandmitglied" loading="lazy">
-      <audio id="audio-captchas" src="audio/mad-world-captchas.mp3" preload="none" playsinline></audio>
-      <button class="audio-play-btn" onclick="toggleAudio('audio-captchas', this)" aria-label="Musikvorschau abspielen">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
-      </button>
-      <div class="portfolio-caption">The Captchas – Bandmitglied</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/loserville-kreativprojekt-baelli-com-innovations-schweiz.jpg"
-           alt="Loserville - Back to the Bottom – Songwriter Musiker Audio/Video Produzent" loading="lazy">
-      <a href="https://youtu.be/M2tl7jz1uyI" target="_blank" rel="noopener noreferrer" class="item-link" aria-label="Loserville – Kreativprojekt, baelli.com Innovations Schweiz"></a>
-      <div class="portfolio-caption">Loserville - Back to the Bottom – Songwriter Musiker Audio/Video Produzent</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/kreative-unterstützung-für-künstler-pirmin-breu-baelli-com-innovations.png"
-           alt="Kreative Unterstützung für Künstler Pirmin Breu – baelli.com Innovations" loading="lazy">
-      <div class="portfolio-caption">Pirmin Breu – Kreative Unterstützung</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/s-w-projektberatung-und-medienproduktion-baelli-com-innovations.jpg"
-           alt="S&W – Projektberatung und Medienproduktion" loading="lazy">
-      <div class="portfolio-caption">S&W – Projektberatung & Medienproduktion</div>
-    </div>
+  <div class="portfolio-grid">
 
     <div class="portfolio-item">
       <img src="images/portfolio/medienproduktion-für-emmi-baelli-com-innovations-schweiz.jpg"
            alt="EMMI AG – Interne Videokommunikation - baelli-Innovations" loading="lazy">
-      <div class="portfolio-caption">EMMI AG – Interne Videokommunikation - baelli-Innovations</div>
+      <div class="portfolio-caption">EMMI AG – Interne Videoreihe</div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/portfolio/kommunikationsprojekt-für-landis-gyr-baelli-com-innovations.gif"
+           alt="Landis + Gyr - Interne Videokommunikation – baelli-Innovations" loading="lazy">
+      <div class="portfolio-caption">Landis + Gyr – Interne Videoreihe</div>
+    </div>
+
+    <div class="portfolio-item is-clickable">
+      <img src="images/portfolio/berger-garten-tv-videoproduktion-baelli-com-innovations.png"
+           alt="Berger Garten TV – Social Media Videoprojekt baelli-Innovations" loading="lazy">
+      <a href="https://www.youtube.com/watch?v=PfSPfdAqXIQ" target="_blank" rel="noopener noreferrer" class="item-link" aria-label="Berger Garten TV – Videoproduktion, baelli.com Innovations"></a>
+      <div class="portfolio-caption">Berger Garten TV – Social Media Videoprojekt</div>
+    </div>
+
+  </div>
+
+<div class="grid-label-wrap section-block">
+    <h2 class="block-title fade-in">Firmenkunden</h2>
+  </div>
+
+  <div class="portfolio-grid">
+
+    <div class="portfolio-item">
+      <img src="images/portfolio/videoproduktion-für-mercedes-benz-schweiz-baelli-com.jpg"
+           alt="Mercedes-Benz - Interne Videokommunikation - baelli-Innovations" loading="lazy">
+      <div class="portfolio-caption">Mercedes-Benz – Interne Videokommunikation</div>
     </div>
 
     <div class="portfolio-item">
       <img src="images/portfolio/videokommunikation-für-six-group-baelli-com-innovations.png"
            alt="SIX Group - Videokommunikation – baelli.com Innovations" loading="lazy">
-      <div class="portfolio-caption">SIX Group - Videokommunikation – baelli.com Innovations</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/kreative-unterstützung-für-künstlerin-syléna-vincent-baelli-com-innovations.jpg"
-           alt="Kreative Unterstützung für Künstlerin Syléna Vincent – baelli.com Innovations" loading="lazy">
-      <div class="portfolio-caption">Syléna Vincent – Kreative Unterstützung</div>
+      <div class="portfolio-caption">SIX Group – Videokommunikation</div>
     </div>
 
     <div class="portfolio-item">
@@ -445,143 +662,6 @@
            alt="Medienproduktion für Post Logistics – baelli.com Innovations" loading="lazy">
       <div class="portfolio-caption">Post Logistics – Medienproduktion</div>
     </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/videoproduktion-für-artoz-papier-baelli-com-innovations-schweiz.jpg"
-           alt="Videoproduktion für Artoz Papier – baelli.com Innovations Schweiz" loading="lazy">
-      <div class="portfolio-caption">Artoz Papier – Videoproduktion</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/kommunikationsprojekt-für-landis-gyr-baelli-com-innovations.gif"
-           alt="Landis + Gyr - Interne Videokommunikation – baelli-Innovations" loading="lazy">
-      <div class="portfolio-caption">Landis + Gyr - Interne Videokommunikation – baelli-Innovations</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/the-man-amplifier-musikproduktion-im-studio.jpg"
-           alt="The Man Amplifier – Bandmitglied" loading="lazy">
-      <audio id="audio-manamplifier" src="audio/saving-man-amplifier.mp3" preload="none" playsinline></audio>
-      <button class="audio-play-btn" onclick="toggleAudio('audio-manamplifier', this)" aria-label="Musikvorschau abspielen">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
-      </button>
-      <div class="portfolio-caption">The Man Amplifier – Bandmitglied</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/wahlvideo-produktion-für-politiker-videokommunikation-baelli-com-innovations-schweiz.jpg"
-           alt="Wahlvideo Produktion für Politiker – Videokommunikation, baelli.com Innovations Schweiz" loading="lazy">
-      <div class="portfolio-caption">Wahlvideo – Politische Videokommunikation</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/politvideo-politische-videokommunikation-baelli-com-innovations-schweiz.png"
-           alt="Politvideo – Politische Videokommunikation, baelli.com Innovations Schweiz" loading="lazy">
-      <div class="portfolio-caption">Politvideo – Politische Videokommunikation</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/wasserstoff-tv-videoproduktion-energie-innovation-baelli-com-innovations.jpg"
-           alt="Wasserstoff TV – Videoproduktion Energie & Innovation" loading="lazy">
-      <a href="https://www.youtube.com/@WasserstoffTV/videos" target="_blank" rel="noopener noreferrer" class="item-link" aria-label="Wasserstoff TV – YouTube Kanal"></a>
-      <div class="portfolio-caption">Wasserstoff TV – Podcast Produzent</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/videoproduktion-für-multigraf-baelli-com-innovations.gif"
-           alt="Videoproduktion für Multigraf – baelli.com Innovations" loading="lazy">
-      <div class="portfolio-caption">Multigraf – Videoproduktion</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/abfallhai-kampagnenproduktion-für-antaswiss-baelli-com.jpg"
-           alt="Abfallhai – Kampagnenproduktion für Antaswiss" loading="lazy">
-      <div class="portfolio-caption">Abfallhai – Kampagnenproduktion Antaswiss</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/medienproduktion-für-schweizer-messebau-baelli-com-innovations.jpg"
-           alt="Medienproduktion für Schweizer Messebau – baelli.com Innovations" loading="lazy">
-      <div class="portfolio-caption">Schweizer Messebau – Medienproduktion</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/videoproduktion-für-coiffure-swiss-baelli-com-innovations.jpg"
-           alt="Videoproduktion für Coiffure Swiss – baelli.com Innovations" loading="lazy">
-      <div class="portfolio-caption">Coiffure Swiss – Videoproduktion</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/kommunikationsprojekt-für-pbr-matic-ag-baelli-com-innovations.png"
-           alt="Kommunikationsprojekt für pbr-matic AG – baelli.com Innovations" loading="lazy">
-      <div class="portfolio-caption">pbr-matic AG – Kommunikationsprojekt</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/videoproduktion-für-mercedes-benz-schweiz-baelli-com.jpg"
-           alt="Mercedes-Benz - Interne Videokommunikation - baelli-Innovations" loading="lazy">
-      <div class="portfolio-caption">Mercedes-Benz - Interne Videokommunikation - baelli-Innovations</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/medienproduktion-für-erusbacher-bräu-baelli-com-innovations.jpg"
-           alt="Medienproduktion für Erusbacher Bräu – baelli.com Innovations" loading="lazy">
-      <a href="https://www.youtube.com/watch?v=Kh8m5-ESX_A" target="_blank" rel="noopener noreferrer" class="item-link" aria-label="Medienproduktion für Erusbacher Bräu – baelli.com Innovations"></a>
-      <div class="portfolio-caption">Erusbacher Bräu – Medienproduktion</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/kommunikationsprojekt-für-michel-itc-baelli-com-innovations.png"
-           alt="Kommunikationsprojekt für Michel ITC – baelli.com Innovations" loading="lazy">
-      <div class="portfolio-caption">Michel ITC – Kommunikationsprojekt</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/berger-garten-tv-videoproduktion-baelli-com-innovations.png"
-           alt="Berger Garten TV – Social Media Videoprojekt baelli-Innovations" loading="lazy">
-      <a href="https://www.youtube.com/watch?v=PfSPfdAqXIQ" target="_blank" rel="noopener noreferrer" class="item-link" aria-label="Berger Garten TV – Videoproduktion, baelli.com Innovations"></a>
-      <div class="portfolio-caption">Berger Garten TV – Social Media Videoprojekt baelli-Innovations</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/tv-beiträge-markus-baelli.png"
-           alt="RTL/ProSieben Schweiz - Video Editor - TV Beiträge" loading="lazy">
-      <div class="portfolio-caption">RTL/ProSieben Schweiz - Video Editor - TV Beiträge</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/videoproduktion-für-akkupoint-baelli-com-innovations-schweiz.jpg"
-           alt="Videoproduktion für AkkuPoint – baelli.com Innovations Schweiz" loading="lazy">
-      <a href="https://www.youtube.com/watch?v=Bd684m1hyaU" target="_blank" rel="noopener noreferrer" class="item-link" aria-label="Videoproduktion für AkkuPoint – baelli.com Innovations Schweiz"></a>
-      <div class="portfolio-caption">AkkuPoint – Videoproduktion</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/kommunikationsprojekt-für-gemeinde-hünenberg-baelli-com.png"
-           alt="Kommunikationsprojekt für Gemeinde Hünenberg – baelli.com" loading="lazy">
-      <a href="https://www.youtube.com/watch?v=zKBa3ET8GZs" target="_blank" rel="noopener noreferrer" class="item-link" aria-label="Kommunikationsprojekt für Gemeinde Hünenberg – baelli.com"></a>
-      <div class="portfolio-caption">Gemeinde Hünenberg – Kommunikationsprojekt</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/werbespot-baelli-innovation.jpg"
-           alt="Dynamic Steel AG - Werbespot Produktion – baelli Innovation" loading="lazy">
-      <a href="https://youtu.be/m4CVntas0tc" target="_blank" rel="noopener noreferrer" class="item-link" aria-label="Werbespot – baelli Innovation"></a>
-      <div class="portfolio-caption">Dynamic Steel AG - Werbespot Produktion – baelli Innovation</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/tv-beiträge-technik-markus-baelli.jpg"
-           alt="TV Beiträge / Technik – Tele M1, Markus Baelli" loading="lazy">
-      <div class="portfolio-caption">TV Beiträge / Technik – Tele M1</div>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="images/portfolio/tv-beitrage-technik-markus-baelli.jpg"
-           alt="TV Beiträge / Technik – TeleTell Zentralschweizer Fernsehen, Markus Baelli" loading="lazy">
-      <div class="portfolio-caption">TV Beiträge / Technik – TeleTell</div>
-    </div>
-
 
     <div class="portfolio-item">
       <img src="images/portfolio/medienproduktion-für-alpiq-baelli-com-innovations-schweiz.png"
@@ -596,12 +676,252 @@
     </div>
 
     <div class="portfolio-item">
-      <img src="images/portfolio/tv-beiträge-tagesschau-aktuell-10vor10.jpg"
-           alt="SRF - Video Editor - Tagesschau 10vor10 Schweiz Aktuell" loading="lazy">
-      <div class="portfolio-caption">SRF - Video Editor - Tagesschau 10vor10 Schweiz Aktuell</div>
+      <img src="images/portfolio/videoproduktion-für-artoz-papier-baelli-com-innovations-schweiz.jpg"
+           alt="Videoproduktion für Artoz Papier – baelli.com Innovations Schweiz" loading="lazy">
+      <div class="portfolio-caption">Artoz Papier – Videoproduktion</div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/portfolio/videoproduktion-für-coiffure-swiss-baelli-com-innovations.jpg"
+           alt="Videoproduktion für Coiffure Swiss – baelli.com Innovations" loading="lazy">
+      <div class="portfolio-caption">Coiffure Swiss – Videoproduktion</div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/portfolio/medienproduktion-für-schweizer-messebau-baelli-com-innovations.jpg"
+           alt="Medienproduktion für Schweizer Messebau – baelli.com Innovations" loading="lazy">
+      <div class="portfolio-caption">Schweizer Messebau – Medienproduktion</div>
+    </div>
+
+    <div class="portfolio-item is-clickable">
+      <img src="images/portfolio/medienproduktion-für-erusbacher-bräu-baelli-com-innovations.jpg"
+           alt="Medienproduktion für Erusbacher Bräu – baelli.com Innovations" loading="lazy">
+      <a href="https://www.youtube.com/watch?v=Kh8m5-ESX_A" target="_blank" rel="noopener noreferrer" class="item-link" aria-label="Medienproduktion für Erusbacher Bräu – baelli.com Innovations"></a>
+      <div class="portfolio-caption">Erusbacher Bräu – Medienproduktion</div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/portfolio/videoproduktion-für-multigraf-baelli-com-innovations.gif"
+           alt="Videoproduktion für Multigraf – baelli.com Innovations" loading="lazy">
+      <div class="portfolio-caption">Multigraf – Videoproduktion</div>
+    </div>
+
+    <div class="portfolio-item is-clickable">
+      <img src="images/portfolio/videoproduktion-für-akkupoint-baelli-com-innovations-schweiz.jpg"
+           alt="Videoproduktion für AkkuPoint – baelli.com Innovations Schweiz" loading="lazy">
+      <a href="https://www.youtube.com/watch?v=Bd684m1hyaU" target="_blank" rel="noopener noreferrer" class="item-link" aria-label="Videoproduktion für AkkuPoint – baelli.com Innovations Schweiz"></a>
+      <div class="portfolio-caption">AkkuPoint – Videoproduktion</div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/portfolio/kommunikationsprojekt-für-michel-itc-baelli-com-innovations.png"
+           alt="Kommunikationsprojekt für Michel ITC – baelli.com Innovations" loading="lazy">
+      <div class="portfolio-caption">Michel ITC – Kommunikationsprojekt</div>
+    </div>
+
+    <div class="portfolio-item is-clickable">
+      <img src="images/portfolio/werbespot-baelli-innovation.jpg"
+           alt="Dynamic Steel AG - Werbespot Produktion – baelli Innovation" loading="lazy">
+      <a href="https://youtu.be/m4CVntas0tc" target="_blank" rel="noopener noreferrer" class="item-link" aria-label="Werbespot – baelli Innovation"></a>
+      <div class="portfolio-caption">Dynamic Steel AG – Werbespot Produktion</div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/portfolio/kommunikationsprojekt-für-pbr-matic-ag-baelli-com-innovations.png"
+           alt="Kommunikationsprojekt für pbr-matic AG – baelli.com Innovations" loading="lazy">
+      <div class="portfolio-caption">pbr-matic AG – Kommunikationsprojekt</div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/portfolio/s-w-projektberatung-und-medienproduktion-baelli-com-innovations.jpg"
+           alt="S&W – Projektberatung und Medienproduktion" loading="lazy">
+      <div class="portfolio-caption">S&W – Projektberatung & Medienproduktion</div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/portfolio/abfallhai-kampagnenproduktion-für-antaswiss-baelli-com.jpg"
+           alt="Abfallhai – Kampagnenproduktion für Antaswiss" loading="lazy">
+      <div class="portfolio-caption">Abfallhai – Kampagne für Antaswiss</div>
     </div>
 
   </div>
+
+<div class="grid-label-wrap section-block">
+    <h2 class="block-title fade-in">Fernsehen</h2>
+  </div>
+
+  <div class="portfolio-grid">
+
+    <div class="portfolio-item is-clickable">
+      <img src="images/portfolio/tv-produktion-baelli-com-innovations.jpg"
+           alt="Sara macht's TV Produktion" loading="lazy">
+      <a href="https://www.youtube.com/watch?v=CJkqmvn6CmI" target="_blank" rel="noopener noreferrer" class="item-link" aria-label="TV Produktion, baelli.com Innovations"></a>
+      <div class="portfolio-caption">Sara macht's – TV-Produktion</div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/portfolio/aargau-tv-medienprojekt-baelli-com-innovations-aargau.png"
+           alt="Aargau.TV – Medienprojekt, baelli.com Innovations Aargau" loading="lazy">
+      <div class="portfolio-caption">Aargau.TV – Medienprojekt</div>
+    </div>
+
+    <div class="portfolio-item is-clickable">
+      <img src="images/portfolio/dizzy-freaky-show-tv-produktion-für-tele-m1-und-teletell.jpg"
+           alt="Dizzy Freaky Show – TV-Produktion für Tele M1 und TeleTell" loading="lazy">
+      <a href="https://youtu.be/KmnyRGdrTIA" target="_blank" rel="noopener noreferrer" class="item-link" aria-label="Dizzy Freaky Show – TV-Produktion für Tele M1 und TeleTell"></a>
+      <div class="portfolio-caption">Dizzy Freaky Show – Produzent Musiksendung</div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/portfolio/luegmol-ch-tv-produktion-und-medienarbeit-baelli-com-innovations.png"
+           alt="luegmol.ch – TV-Produktion und Medienarbeit, baelli.com Innovations" loading="lazy">
+      <div class="portfolio-caption">luegmol.ch – TV-Produktion & Medienarbeit</div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/portfolio/tv-beiträge-markus-baelli.png"
+           alt="RTL/ProSieben Schweiz - Video Editor - TV Beiträge" loading="lazy">
+      <div class="portfolio-caption">RTL/ProSieben Schweiz – Video Editor – TV Beiträge</div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/portfolio/tv-beiträge-technik-markus-baelli.jpg"
+           alt="TV Beiträge / Technik – Tele M1, Markus Baelli" loading="lazy">
+      <div class="portfolio-caption">TV Beiträge / Technik – Tele M1</div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/portfolio/tv-beitrage-technik-markus-baelli.jpg"
+           alt="TV Beiträge / Technik – TeleTell Zentralschweizer Fernsehen, Markus Baelli" loading="lazy">
+      <div class="portfolio-caption">TV Beiträge / Technik – TeleTell</div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/portfolio/tv-beiträge-tagesschau-aktuell-10vor10.jpg"
+           alt="SRF - Video Editor - Tagesschau 10vor10 Schweiz Aktuell" loading="lazy">
+      <div class="portfolio-caption">SRF – Video Editor – Tagesschau 10vor10 Schweiz Aktuell</div>
+    </div>
+
+  </div>
+
+<div class="grid-label-wrap section-block">
+    <h2 class="block-title fade-in">Musik</h2>
+  </div>
+
+  <div class="portfolio-grid">
+
+    <div class="portfolio-item is-clickable">
+      <img src="images/portfolio/loserville-kreativprojekt-baelli-com-innovations-schweiz.jpg"
+           alt="Loserville - Back to the Bottom – Songwriter Musiker Audio/Video Produzent" loading="lazy">
+      <a href="https://youtu.be/M2tl7jz1uyI" target="_blank" rel="noopener noreferrer" class="item-link" aria-label="Loserville – Kreativprojekt, baelli.com Innovations Schweiz"></a>
+      <div class="portfolio-caption">Loserville – Back to the Bottom – Songwriter Musiker Audio/Video Produzent</div>
+    </div>
+
+    <div class="portfolio-item is-clickable">
+      <img src="images/portfolio/the-man-amplifier-musikproduktion-im-studio.jpg"
+           alt="The Man Amplifier – Bandmitglied" loading="lazy">
+      <audio id="audio-manamplifier" src="audio/saving-man-amplifier.mp3" preload="none" playsinline></audio>
+      <button class="audio-play-btn" onclick="toggleAudio('audio-manamplifier', this)" aria-label="Musikvorschau abspielen">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+      <div class="portfolio-caption">The Man Amplifier – Bandmitglied</div>
+    </div>
+
+    <div class="portfolio-item is-clickable">
+      <img src="images/portfolio/mega-mege-rollbraett-cover.jpg"
+           alt="Mega Mege - Rollbrätt - Songwriter Musiker Produzent" loading="lazy">
+      <a href="https://open.spotify.com/intl-de/track/0Ld5raNN2bSLqH6HPQKpmy" target="_blank" rel="noopener noreferrer" class="item-link" aria-label="Mega Mege Rollbrätt – Kreativprojekt, baelli.com Innovations"></a>
+      <div class="portfolio-caption">Mega Mege – Rollbrätt – Songwriter Musiker Produzent</div>
+    </div>
+
+    <div class="portfolio-item is-clickable">
+      <img src="images/portfolio/the-captchas-musikprojekt-und-produktion-baelli-com-innovations.jpg"
+           alt="The Captchas – Bandmitglied" loading="lazy">
+      <audio id="audio-captchas" src="audio/mad-world-captchas.mp3" preload="none" playsinline></audio>
+      <button class="audio-play-btn" onclick="toggleAudio('audio-captchas', this)" aria-label="Musikvorschau abspielen">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+      <div class="portfolio-caption">The Captchas – Bandmitglied</div>
+    </div>
+
+    <div class="portfolio-item is-clickable">
+      <img src="images/portfolio/mäggi-und-die-brigitten-musikproduktion-champagner-strichnin.jpg"
+           alt="Mäggi und die Brigitten – Bandmitglied" loading="lazy">
+      <audio id="audio-maeggi" src="audio/schlauchfrei.mp3" preload="none" playsinline></audio>
+      <button class="audio-play-btn" onclick="toggleAudio('audio-maeggi', this)" aria-label="Musikvorschau abspielen">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+      <div class="portfolio-caption">Mäggi und die Brigitten – Bandmitglied</div>
+    </div>
+
+  </div>
+
+<div class="grid-label-wrap section-block">
+    <h2 class="block-title fade-in">Kultur &amp; Künstler</h2>
+  </div>
+
+  <div class="portfolio-grid">
+
+    <div class="portfolio-item">
+      <img src="images/portfolio/medienpreis-nordwestschweiz-baelli-com-innovations.png"
+           alt="Medienpreis Nordwestschweiz – Jury Mitglied, baelli.com Innovations" loading="lazy">
+      <div class="portfolio-caption">Medienpreis Nordwestschweiz – Jury Mitglied</div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/portfolio/kreative-unterstützung-für-künstler-philip-galizia-baelli-com-innovations.jpg"
+           alt="Kreative Unterstützung für Künstler Philip Galizia – baelli.com Innovations" loading="lazy">
+      <div class="portfolio-caption">Philip Galizia – Kreative Unterstützung</div>
+    </div>
+
+    <div class="portfolio-item is-clickable">
+      <a href="https://www.samueldegasne.com/article-652386.html" target="_blank" rel="noopener noreferrer" class="item-link" aria-label="Queerbeer – Kreativprojekt"></a>
+      <img src="images/portfolio/queerbeer-kreativprojekt-baelli-com-innovations-schweiz.jpg"
+           alt="Queerbeer – Kreativprojekt, baelli.com Innovations Schweiz" loading="lazy">
+      <div class="portfolio-caption">Queerbeer – Kreativprojekt</div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/portfolio/kreative-unterstuetzung-fuer-kuenstler-pirmin-breu-baelli-com-innovations.jpg"
+           alt="Kreative Unterstützung für Künstler Pirmin Breu – baelli.com Innovations" loading="lazy">
+      <div class="portfolio-caption">Pirmin Breu – Kreative Unterstützung</div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/portfolio/kreative-unterstützung-für-künstlerin-syléna-vincent-baelli-com-innovations.jpg"
+           alt="Kreative Unterstützung für Künstlerin Syléna Vincent – baelli.com Innovations" loading="lazy">
+      <div class="portfolio-caption">Syléna Vincent – Kreative Unterstützung</div>
+    </div>
+
+  </div>
+
+<div class="grid-label-wrap section-block">
+    <h2 class="block-title fade-in">Politik &amp; Gemeinwesen</h2>
+  </div>
+
+  <div class="portfolio-grid">
+
+    <div class="portfolio-item">
+      <img src="images/portfolio/wahlvideo-produktion-für-politiker-videokommunikation-baelli-com-innovations-schweiz.jpg"
+           alt="Wahlvideo Produktion für Politiker – Videokommunikation, baelli.com Innovations Schweiz" loading="lazy">
+      <div class="portfolio-caption">Wahlvideo – Politische Videokommunikation</div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/portfolio/politvideo-politische-videokommunikation-baelli-com-innovations-schweiz.png"
+           alt="Politvideo – Politische Videokommunikation, baelli.com Innovations Schweiz" loading="lazy">
+      <div class="portfolio-caption">Politvideo – Politische Videokommunikation</div>
+    </div>
+
+    <div class="portfolio-item is-clickable">
+      <img src="images/portfolio/kommunikationsprojekt-für-gemeinde-hünenberg-baelli-com.png"
+           alt="Kommunikationsprojekt für Gemeinde Hünenberg – baelli.com" loading="lazy">
+      <a href="https://www.youtube.com/watch?v=zKBa3ET8GZs" target="_blank" rel="noopener noreferrer" class="item-link" aria-label="Kommunikationsprojekt für Gemeinde Hünenberg – baelli.com"></a>
+      <div class="portfolio-caption">Gemeinde Hünenberg – Kommunikationsprojekt</div>
+    </div>
+
+  </div>
+
 
   <!-- INVITATION -->
   <section class="invitation">
@@ -612,6 +932,7 @@
       dann sind wir wahrscheinlich füreinander gemacht.
     </p>
     <div class="contact-row fade-in">
+      <a href="index.html#kontakt">Anfrage senden</a>
       <a href="tel:+41565351543">Anrufen</a>
       <a href="mailto:info@baelli.com">Mail</a>
     </div>
