@@ -216,15 +216,27 @@
       color: var(--black);
       letter-spacing: 0.02em;
     }
-    .angebot-erst {
-      margin-top: 0.9rem;
-      font-size: 0.8rem;
-      line-height: 1.6;
-      color: #6a6a6a;
-      font-weight: 400;
-      border-left: 2px solid var(--orange);
-      padding-left: 0.9rem;
+    .angebot-einstieg {
+      margin: -1.5rem 0 3rem;
+      max-width: 720px;
+      background: var(--white);
+      border-left: 3px solid var(--orange);
+      padding: 1.3rem 1.5rem;
     }
+    .angebot-einstieg p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--black);
+      margin-bottom: 0.7rem;
+    }
+    .angebot-einstieg strong { font-weight: 700; }
+    .angebot-einstieg-link {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--orange);
+      text-decoration: none;
+    }
+    .angebot-einstieg-link:hover { text-decoration: underline; }
     .angebot-note {
       margin-top: 3rem;
       max-width: 720px;
@@ -692,14 +704,18 @@
       <h2 class="angebot-title fade-in">Ich schlage den Weg frei. Sie bauen ihn aus.</h2>
       <p class="angebot-sub fade-in">In jedem Betrieb gibt es Abläufe, über die sich intern niemand mehr wundert – weil sie schon immer so waren. Von aussen sieht man sie sofort. Drei Wege, wie wir zusammenarbeiten können:</p>
 
+      <div class="angebot-einstieg fade-in">
+        <p><strong>Am Anfang steht ein Gespräch.</strong> 30 Minuten, kostenlos und unverbindlich – bei Ihnen, am Telefon oder per Video. Wir schauen gemeinsam, wo sich in Ihrem Betrieb ein genauerer Blick lohnt.</p>
+        <a href="#kontakt" class="angebot-einstieg-link">Erstgespräch vereinbaren →</a>
+      </div>
+
       <div class="angebot-grid">
         <div class="angebot-card fade-in">
           <p class="angebot-step">Schritt 1</p>
           <h3>Der Blick von aussen</h3>
           <p>Ein halber Tag in Ihrem Betrieb. Wir gehen gemeinsam durch, was täglich Zeit frisst: Offerten, Rapporte, Terminplanung, Ablage, Mailflut.</p>
           <p>Danach bekommen Sie eine geordnete Liste – was sich mit heutigen Mitteln vereinfachen lässt, was das jeweils bedeutet, und womit ich anfangen würde.</p>
-          <p class="angebot-meta">CHF 750 · Fixpreis · kein Folgeauftrag nötig</p>
-          <p class="angebot-erst">Einführungspreis für meine ersten Aufträge ausserhalb der eigenen Projekte. Sie bekommen dafür meine volle Aufmerksamkeit – und einen Preis, den es später nicht mehr gibt.</p>
+          <p class="angebot-meta">Fixpreis nach dem Erstgespräch · kein Folgeauftrag nötig</p>
         </div>
 
         <div class="angebot-card fade-in">
@@ -765,7 +781,7 @@
       </div>
       <div class="kontakt-field">
         <label for="kf-text">Worum geht es?</label>
-        <textarea id="kf-text" name="nachricht" required></textarea>
+        <textarea id="kf-text" name="nachricht" placeholder="Erstgespräch" required></textarea>
       </div>
       <button type="submit" class="kontakt-submit">Nachricht senden</button>
       <p class="kontakt-status" id="kontaktStatus" role="status" aria-live="polite"></p>
