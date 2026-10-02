@@ -206,12 +206,11 @@
     }
     /* ===== EIGENPRODUKTIONEN (Band wie Referenzband, mit Slogan) ===== */
     @keyframes eigen-zyklus {
-      0%     { opacity: 0;    transform: scale(0.7);  pointer-events: none; }
-      6%     { opacity: 0.12; transform: scale(0.76); pointer-events: auto; }
-      18.2%  { opacity: 0.9;  transform: scale(0.98); pointer-events: auto; }
-      30.3%  { opacity: 0.12; transform: scale(1.2);  pointer-events: auto; }
-      36.3%  { opacity: 0;    transform: scale(1.25); pointer-events: none; }
-      100%   { opacity: 0;    transform: scale(1.25); pointer-events: none; }
+      0%     { opacity: 0;    transform: scale(0.8);  pointer-events: none; }
+      5%     { opacity: 0.9;  transform: scale(0.9);  pointer-events: auto; }
+      28%    { opacity: 0.9;  transform: scale(1.05); pointer-events: auto; }
+      33.3%  { opacity: 0;    transform: scale(1.12); pointer-events: none; }
+      100%   { opacity: 0;    transform: scale(1.12); pointer-events: none; }
     }
     .eigenband .referenzband-liste { flex-direction: column; align-items: center; gap: 1.1rem; }
     .eigenband .referenzband-liste a { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; text-align: center; padding: 0 1rem; }
@@ -227,12 +226,12 @@
       .eigenband .referenzband-liste.buehne a {
         justify-content: center;
         gap: 0.2rem;
-        animation: eigen-zyklus 12s linear infinite both;
+        animation: eigen-zyklus 24s linear infinite both;
       }
       .eigenband .eigen-slogan { font-size: clamp(0.8rem, 1.5vw, 1.05rem); }
       .eigenband .referenzband-liste.buehne a:nth-child(1) { animation-delay: 0s; }
-      .eigenband .referenzband-liste.buehne a:nth-child(2) { animation-delay: 4s; }
-      .eigenband .referenzband-liste.buehne a:nth-child(3) { animation-delay: 8s; }
+      .eigenband .referenzband-liste.buehne a:nth-child(2) { animation-delay: 8s; }
+      .eigenband .referenzband-liste.buehne a:nth-child(3) { animation-delay: 16s; }
     }
 
     .manifesto-text {
