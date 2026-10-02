@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prozesse mit KI vereinfachen – für KMU | Markus Baelli, baelli.com Innovations</title>
-  <meta name="description" content="Ich zeige KMU, welche Abläufe sich mit heutigen KI-Werkzeugen vereinfachen lassen – und baue die Lösung mit Ihnen. Markus Baelli, Muri AG, Schweiz.">
+  <title>Storytelling, Ideen, Konzepte | Markus Baelli, Muri AG</title>
+  <meta name="description" content="Storytelling, Ideen, Konzepte: Markus Baelli entwickelt und produziert, was noch keinen Namen hat. Produktionen für bekannte Schweizer Firmen und Fernsehen.">
   <link rel="stylesheet" href="style.css">
   <style>
     /* ===== HERO QUOTE ===== */
@@ -21,12 +21,147 @@
       font-style: normal;
       color: var(--orange-light);
     }
-    .hero-byline {
-      font-size: 0.8rem;
-      letter-spacing: 0.22em;
+    .hero-content h1.hero-quote {
+      font-size: clamp(1.15rem, 2.4vw, 1.6rem);
+      font-weight: 200;
+      line-height: 1.3;
+      letter-spacing: 0.06em;
+      opacity: 1;
+      max-width: 700px;
+      margin: 0 auto;
+      text-shadow: 0 2px 24px rgba(0,0,0,0.55);
+      text-wrap: balance;
+    }
+    .hero-content p.hero-fokus {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: baseline;
+      gap: 0.2em 0.5em;
+      font-size: clamp(1rem, 3.4vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: 0.005em;
+      line-height: 1.1;
+      opacity: 1;
+      max-width: 1100px;
+      margin: 0 auto;
+      text-shadow: 0 3px 30px rgba(0,0,0,0.6);
+    }
+    .hero-fokus span + span::before {
+      content: "·";
+      color: var(--orange-light);
+      font-weight: 400;
+      margin-right: 0.5em;
+    }
+    .hero-content p.hero-fokus { flex-wrap: nowrap; white-space: nowrap; }
+    .hero-trenner {
+      width: 56px;
+      height: 2px;
+      background: var(--orange-light);
+      margin: 1.8rem auto 1.4rem;
+      border-radius: 2px;
+    }
+    .hero-content p.hero-byline {
+      font-size: 0.78rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.62);
+      margin: 0 auto 1.6rem;
+    }
+    @media (max-width: 560px) {
+      .hero-content { padding-left: 1rem; padding-right: 1rem; }
+      .hero-content p.hero-fokus { font-size: 4.9vw; gap: 0 0.35em; }
+      .hero-fokus span + span::before { margin-right: 0.35em; }
+      .hero-content p.hero-byline { letter-spacing: 0.08em; font-size: 0.68rem; white-space: nowrap; }
+    }
+
+    /* ===== REFERENZBAND ===== */
+    .referenzband {
+      background: var(--black);
+      color: var(--white);
+      text-align: center;
+      padding: 1.8rem 1.5rem 1.6rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      overflow: hidden;
+    }
+    .referenzband-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
       color: rgba(255,255,255,0.45);
-      margin-top: 2rem;
+      margin-bottom: 0.7rem;
+    }
+    .referenzband-liste {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.3rem 0;
+      font-size: clamp(0.95rem, 1.7vw, 1.2rem);
+      font-weight: 300;
+      letter-spacing: 0.02em;
+    }
+    .referenzband-liste a {
+      color: rgba(255,255,255,0.88);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .referenzband-liste a:hover, .referenzband-liste a:focus-visible { color: var(--orange-light); }
+    .referenzband-liste a + a::before {
+      content: "·";
+      color: var(--orange-light);
+      margin: 0 0.7em;
+      display: inline-block;
+    }
+
+    @media (max-width: 560px) {
+      .referenzband-liste { gap: 0.4rem 1.2rem; }
+      .referenzband-liste a + a::before { content: none; }
+    }
+
+    /* Namen nacheinander ein- und ausblenden (nur ohne "weniger Bewegung") */
+    @keyframes ref-zyklus {
+      0%     { opacity: 0;    transform: scale(0.6);  pointer-events: none; }
+      1.8%   { opacity: 0.12; transform: scale(0.67); pointer-events: auto; }
+      5.45%  { opacity: 0.9;  transform: scale(1.05); pointer-events: auto; }
+      9.09%  { opacity: 0.12; transform: scale(1.43); pointer-events: auto; }
+      10.9%  { opacity: 0;    transform: scale(1.5);  pointer-events: none; }
+      100%   { opacity: 0;    transform: scale(1.5);  pointer-events: none; }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .referenzband { padding: 1.8rem 1.5rem 1.4rem; }
+      .referenzband-liste.buehne {
+        position: relative;
+        display: block;
+        height: clamp(3rem, 7vw, 4.6rem);
+        font-size: clamp(1.9rem, 5.2vw, 3.3rem);
+        font-weight: 300;
+        letter-spacing: 0.03em;
+      }
+      .referenzband-liste.buehne a {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        color: var(--white);
+        text-shadow: 0 0 30px rgba(224,144,64,0.25);
+        animation: ref-zyklus 27.5s linear infinite both;
+      }
+      .referenzband-liste.buehne a + a::before { content: none; }
+      .referenzband-liste.buehne a:nth-child(1)  { animation-delay: 0s; }
+      .referenzband-liste.buehne a:nth-child(2)  { animation-delay: 2.5s; }
+      .referenzband-liste.buehne a:nth-child(3)  { animation-delay: 5s; }
+      .referenzband-liste.buehne a:nth-child(4)  { animation-delay: 7.5s; }
+      .referenzband-liste.buehne a:nth-child(5)  { animation-delay: 10s; }
+      .referenzband-liste.buehne a:nth-child(6)  { animation-delay: 12.5s; }
+      .referenzband-liste.buehne a:nth-child(7)  { animation-delay: 15s; }
+      .referenzband-liste.buehne a:nth-child(8)  { animation-delay: 17.5s; }
+      .referenzband-liste.buehne a:nth-child(9)  { animation-delay: 20s; }
+      .referenzband-liste.buehne a:nth-child(10) { animation-delay: 22.5s; }
+      .referenzband-liste.buehne a:nth-child(11) { animation-delay: 25s; }
+      .referenzband:hover .referenzband-liste.buehne a { animation-play-state: paused; }
     }
 
     /* ===== MANIFESTO CLAIM (Positionierung) ===== */
@@ -59,6 +194,47 @@
       padding: 8rem 2rem;
       text-align: center;
     }
+    .manifesto-fokus {
+      max-width: 860px;
+      margin: 3.5rem auto 0;
+      font-size: clamp(1.5rem, 3.6vw, 2.5rem);
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: 0.01em;
+      color: var(--white);
+      text-align: center;
+    }
+    /* ===== EIGENPRODUKTIONEN (Band wie Referenzband, mit Slogan) ===== */
+    @keyframes eigen-zyklus {
+      0%     { opacity: 0;    transform: scale(0.7);  pointer-events: none; }
+      6%     { opacity: 0.12; transform: scale(0.76); pointer-events: auto; }
+      18.2%  { opacity: 0.9;  transform: scale(0.98); pointer-events: auto; }
+      30.3%  { opacity: 0.12; transform: scale(1.2);  pointer-events: auto; }
+      36.3%  { opacity: 0;    transform: scale(1.25); pointer-events: none; }
+      100%   { opacity: 0;    transform: scale(1.25); pointer-events: none; }
+    }
+    .eigenband .referenzband-liste { flex-direction: column; align-items: center; gap: 1.1rem; }
+    .eigenband .referenzband-liste a { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; text-align: center; padding: 0 1rem; }
+    .eigenband .referenzband-liste a + a::before { content: none; }
+    .eigenband .eigen-slogan { font-size: 0.85rem; font-weight: 300; letter-spacing: 0.02em; color: rgba(255,255,255,0.7); }
+    @media (prefers-reduced-motion: no-preference) {
+      .eigenband { padding: 1.8rem 1.5rem 1.4rem; }
+      .eigenband .referenzband-liste.buehne {
+        display: block;
+        height: clamp(5.4rem, 12vw, 7.4rem);
+        font-size: clamp(1.9rem, 5.2vw, 3.3rem);
+      }
+      .eigenband .referenzband-liste.buehne a {
+        justify-content: center;
+        gap: 0.2rem;
+        animation: eigen-zyklus 12s linear infinite both;
+      }
+      .eigenband .eigen-slogan { font-size: clamp(0.8rem, 1.5vw, 1.05rem); }
+      .eigenband .referenzband-liste.buehne a:nth-child(1) { animation-delay: 0s; }
+      .eigenband .referenzband-liste.buehne a:nth-child(2) { animation-delay: 4s; }
+      .eigenband .referenzband-liste.buehne a:nth-child(3) { animation-delay: 8s; }
+    }
+
     .manifesto-text {
       max-width: 720px;
       margin: 0 auto;
@@ -258,10 +434,13 @@
       text-align: center;
     }
 
+    /* Heller Zwischensatz zwischen den dunklen Bändern */
+    .satz-weiss { background: var(--white); padding: 4.5rem 2rem; }
+    .satz-weiss p { max-width: 640px; margin: 0 auto; text-align: center; font-size: clamp(1.15rem, 2.2vw, 1.55rem); font-weight: 300; font-style: italic; line-height: 1.6; color: var(--gray); }
     /* ===== WORLDS ===== */
     .worlds {
       background: var(--white);
-      padding: 7rem 2rem;
+      padding: 2.5rem 2rem 7rem;
     }
     .worlds-inner {
       max-width: 880px;
@@ -321,6 +500,14 @@
       color: var(--white);
       padding: 9rem 2rem 7rem;
       text-align: center;
+    }
+    .invitation-headline {
+      max-width: 820px;
+      margin: 0 auto 2rem;
+      font-size: clamp(1.8rem, 4.2vw, 3.1rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--white);
     }
     .invitation-closer {
       max-width: 640px;
@@ -499,15 +686,15 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://baelli.com/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Prozesse mit KI vereinfachen – für KMU | Markus Baelli, baelli.com">
-  <meta property="og:description" content="Ich zeige KMU, welche Abläufe sich mit heutigen KI-Werkzeugen vereinfachen lassen – und baue die Lösung mit Ihnen. Markus Baelli, Muri AG, Schweiz.">
+  <meta property="og:title" content="Storytelling, Ideen, Konzepte | Markus Baelli, Muri AG">
+  <meta property="og:description" content="Storytelling, Ideen, Konzepte: Markus Baelli entwickelt und produziert, was noch keinen Namen hat. Produktionen für bekannte Schweizer Firmen und Fernsehen.">
   <meta property="og:url" content="https://baelli.com/">
   <meta property="og:image" content="https://baelli.com/images/markus-baelli-portrait.jpg">
   <meta property="og:locale" content="de_CH">
   <meta property="og:site_name" content="baelli.com Innovations">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Prozesse mit KI vereinfachen – für KMU | Markus Baelli, baelli.com">
-  <meta name="twitter:description" content="Ich zeige KMU, welche Abläufe sich mit heutigen KI-Werkzeugen vereinfachen lassen – und baue die Lösung mit Ihnen. Markus Baelli, Muri AG, Schweiz.">
+  <meta name="twitter:title" content="Storytelling, Ideen, Konzepte | Markus Baelli, Muri AG">
+  <meta name="twitter:description" content="Storytelling, Ideen, Konzepte: Markus Baelli entwickelt und produziert, was noch keinen Namen hat. Produktionen für bekannte Schweizer Firmen und Fernsehen.">
   <meta name="twitter:image" content="https://baelli.com/images/markus-baelli-portrait.jpg">
   <script type="application/ld+json">
   {
@@ -517,7 +704,7 @@
         "@type": "Person",
         "@id": "https://baelli.com/#person",
         "name": "Markus Baelli",
-        "jobTitle": ["Prozessberater", "Medienproduzent", "Hypnosetherapeut"],
+        "jobTitle": ["Storyteller", "Konzepter", "Medienproduzent", "Hypnosetherapeut"],
         "url": "https://baelli.com/",
         "image": "https://baelli.com/images/markus-baelli-portrait.jpg",
         "address": {
@@ -528,14 +715,14 @@
         },
         "email": "info@baelli.com",
         "telephone": "+41565351543",
-        "knowsAbout": ["Prozessoptimierung", "Künstliche Intelligenz im Unternehmen", "Digitalisierung für KMU", "Medienproduktion", "Hypnosetherapie"],
+        "knowsAbout": ["Storytelling", "Konzeptentwicklung", "Medienproduktion", "Videoproduktion", "Hypnosetherapie"],
         "sameAs": ["https://hypnozoom.ch"]
       },
       {
         "@type": "ProfessionalService",
         "@id": "https://baelli.com/#service",
         "name": "baelli.com Innovations",
-        "description": "Prozessberatung für kleine und mittlere Unternehmen: Abläufe analysieren, mit KI-Werkzeugen vereinfachen und Mitarbeitende befähigen.",
+        "description": "Storytelling, Ideen und Konzepte: entwickeln und umsetzen, von Film und Kampagne bis zur Produktion.",
         "url": "https://baelli.com/",
         "founder": { "@id": "https://baelli.com/#person" },
         "email": "info@baelli.com",
@@ -553,7 +740,7 @@
         "@id": "https://baelli.com/#website",
         "url": "https://baelli.com/",
         "name": "baelli.com Innovations",
-        "description": "Prozessberatung, Medienproduktion und Hypnosetherapie von Markus Baelli",
+        "description": "Storytelling, Konzepte, Medienproduktion und Hypnosetherapie von Markus Baelli",
         "inLanguage": "de-CH"
       }
     ]
@@ -576,7 +763,6 @@
     </div>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html" class="active">Start</a></li>
-      <li><a href="#fuer-unternehmen">Für Unternehmen</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="https://hypnozoom.ch" target="_blank" rel="noopener noreferrer">Hypnosetherapie</a></li>
       <li><a href="ueber-mich.html">Über mich</a></li>
@@ -592,29 +778,39 @@
     </video>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-quote">Im Rauschen ist <em>alles möglich.</em></p>
+      <p class="hero-fokus"><span>Storytelling</span><span>Ideen</span><span>Konzepte</span></p>
+      <div class="hero-trenner" aria-hidden="true"></div>
       <p class="hero-byline">Markus Baelli &nbsp;·&nbsp; Muri AG &nbsp;·&nbsp; Schweiz</p>
-      <a href="#manifesto" class="hero-scroll">↓</a>
+      <h1 class="hero-quote">Im Rauschen ist <em>alles möglich.</em></h1>
+      <a href="#referenzen" class="hero-scroll">↓</a>
     </div>
   </section>
 
-  <!-- MANIFESTO -->
-  <section class="manifesto" id="manifesto">
-    <h1 class="manifesto-claim fade-in">Ich bin der, den man ruft,<br>wenn etwas Neues noch keinen Namen hat.</h1>
-    <div class="manifesto-text fade-in">
-      <p>Mein Antrieb war immer derselbe: <strong>etwas in Bewegung bringen.</strong><br>
-         Menschen, die feststecken. Unternehmen mit Betriebsblindheit.<br>
-         Ideen, die jahrelang auf ihren Moment warten.</p>
-      <p>Es braucht immer jemanden, der mit der Machete durch den Dschungel vorangeht.<br>
-         Ich schlage den Weg frei. Sie bauen ihn aus.<br>
-         Was am Ende steht, hätte keiner allein geschafft.</p>
-    </div>
+  <!-- REFERENZBAND -->
+  <section class="referenzband" id="referenzen" aria-label="Referenzen">
+    <p class="referenzband-label">Produktionen für</p>
+    <p class="referenzband-liste buehne">
+      <a href="portfolio.html#p-mercedes">Mercedes-Benz</a><a href="portfolio.html#p-emmi">Emmi</a><a href="portfolio.html#p-landis">Landis+Gyr</a><a href="portfolio.html#p-six">SIX Group</a><a href="portfolio.html#p-post">Post Logistics</a><a href="portfolio.html#p-messebau">Schweizer Messebau</a><a href="portfolio.html#p-srf">SRF</a><a href="portfolio.html#p-alpiq">Alpiq</a><a href="portfolio.html#p-antaswiss">Antaswiss</a><a href="portfolio.html#p-artoz">Artoz</a><a href="portfolio.html">und weitere</a>
+    </p>
+  </section>
+
+  <!-- ZWISCHENSATZ -->
+  <section class="satz-weiss">
+    <p class="fade-in">Schreibt das Leben die Geschichte – oder die Geschichte das Leben?</p>
+  </section>
+
+  <!-- EIGENPRODUKTIONEN -->
+  <section class="referenzband eigenband" aria-label="Eigenproduktionen">
+    <p class="referenzband-label">Eigenproduktionen</p>
+    <p class="referenzband-liste buehne">
+      <a href="https://expresswohnung.ch/" target="_blank" rel="noopener noreferrer"><span>ExpressWohnung</span><span class="eigen-slogan">Nachmieter finden. In 72 Stunden. Gratis.</span></a><a href="https://quizwheel.ch/" target="_blank" rel="noopener noreferrer"><span>QuizWheel</span><span class="eigen-slogan">Ein Rad, das Besucher zum Mitmachen bringt.</span></a><a href="https://hypnozoom.ch/" target="_blank" rel="noopener noreferrer"><span>HypnoZoom</span><span class="eigen-slogan">Hypnosetherapie, die Ihre Geschichte weiterschreibt.</span></a>
+    </p>
   </section>
 
   <!-- PROOF -->
   <section class="worlds">
     <div class="worlds-inner">
-      <p class="antenna-bridge fade-in"><em>Vielleicht bin ich einfach eine gute Antenne für Kreativität.<br>Das würde erklären, warum sich keins meiner Projekte anfühlt wie das andere.</em></p>
+      <p class="antenna-bridge fade-in"><em>Ich arbeite an beidem. Drei Wege.</em></p>
 
       <a href="portfolio.html" class="world-item fade-in">
         <span class="world-icon" aria-hidden="true">
@@ -624,7 +820,7 @@
           </svg>
         </span>
         <span class="world-title">Portfolio</span>
-        <span class="world-desc">Dreissig Jahre Produktionen, Kampagnen und Projekte. Hier sehen Sie, was daraus entstanden ist – und woher mein Blick kommt.</span>
+        <span class="world-desc">Zehntausend Stunden Geschichten, vor und hinter der Kamera. Eine Auswahl.</span>
         <span class="world-arrow">→</span>
       </a>
 
@@ -636,110 +832,34 @@
           </svg>
         </span>
         <span class="world-title">Hypnose&shy;therapie</span>
-        <span class="world-desc">Menschen verändern sich von innen. Manchmal reichen wenige Stunden, um das zu lösen, woran man jahrelang festgehalten hat.</span>
+        <span class="world-desc">Wir tragen Geschichten mit uns, die wir nie ausgesucht haben. In der Hypnose finden wir heraus, welche davon noch zu Ihnen gehören.</span>
         <span class="world-arrow">→</span>
       </a>
 
-      <a href="ueber-mich.html" class="world-item fade-in">
+      <a href="#kontakt" class="world-item fade-in">
         <span class="world-icon" aria-hidden="true">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
           </svg>
         </span>
-        <span class="world-title">Kommunikation</span>
-        <span class="world-desc">Jede Produktion ist ein Massanzug – kein Projekt wie das andere. Für Standardlösungen bin ich die falsche Adresse. Wer etwas wagt, ist bei mir richtig – und dieses Vertrauen wird immer belohnt.</span>
+        <span class="world-title">Mit mir arbeiten</span>
+        <span class="world-desc">Jede Geschichte ist anders. Für Standardlösungen bin ich die falsche Adresse. Wer etwas Neues erzählen will – geschäftlich oder privat – ist bei mir richtig.</span>
         <span class="world-arrow">→</span>
       </a>
 
     </div>
   </section>
 
-  <section class="proof">
-    <div class="proof-inner">
-      <p class="section-eyebrow fade-in">Was das konkret heisst</p>
-      <p class="proof-lead fade-in">In den letzten Monaten habe ich mit heutigen KI-Werkzeugen Dinge gebaut, für die es früher ein Team, ein Budget und ein halbes Jahr gebraucht hätte. Alles eigene Projekte – entstanden, weil ich wissen wollte, wie weit man damit kommt. Sie laufen.</p>
-
-      <div class="proof-item fade-in">
-        <div class="proof-name">
-          <a href="https://expresswohnung.ch" target="_blank" rel="noopener noreferrer">ExpressWohnung</a>
-          <small>App für iOS und Android</small>
-        </div>
-        <div class="proof-desc">Wer aus einem Mietvertrag raus will, braucht zuerst einen Nachmieter – und zwar schnell. ExpressWohnung bringt beide Seiten direkt zusammen: Inserat in zwei Minuten, ohne Registrierung, nach 72 Stunden verfällt es von selbst. Gebaut von der ersten Skizze bis zur veröffentlichten App in beiden Stores – samt Website, Domain und eigener Absenderadresse.</div>
-      </div>
-
-      <div class="proof-item fade-in">
-        <div class="proof-name">
-          <a href="https://quizwheel.ch" target="_blank" rel="noopener noreferrer">QuizWheel</a>
-          <small>Web-Anwendung für Events</small>
-        </div>
-        <div class="proof-desc">Ein Messestand ist schnell aufgebaut – aber wie bringt man die Leute dazu, stehen zu bleiben und ihre Adresse dazulassen? QuizWheel macht daraus eine Spielshow auf dem grossen Bildschirm: Logo hochladen, und die ganze Show läuft in den Firmenfarben. Gewinner tragen ihre E-Mail ein, am Abend liegt die Liste als Datei bereit. Läuft auch ohne Internet und ohne Moderator.</div>
-      </div>
-
-      <div class="proof-item fade-in">
-        <div class="proof-name">
-          Zwei Websites
-          <small>samt E-Mail-Infrastruktur</small>
-        </div>
-        <div class="proof-desc">baelli.com und hypnozoom.ch komplett neu aufgebaut – inklusive Umzug der Domains und einer E-Mail-Einrichtung, bei der geprüft ist, dass niemand in fremdem Namen schreiben kann.</div>
-      </div>
-
-      <div class="proof-item fade-in">
-        <div class="proof-name">
-          Administration
-          <small>Buchhaltung, Formulare, Abläufe</small>
-        </div>
-        <div class="proof-desc">Meine eigene Buchhaltung von Grund auf neu organisiert – nicht durch ein neues Programm, sondern durch einen Ablauf, den ich auch im Dezember noch verstehe. Genauso das Aufnahmeformular meiner Praxis: Es liess sich unterwegs nicht sauber ausfüllen und lieferte Angaben, mit denen ich in der Arbeit wenig anfangen konnte. Heute ist es auf dem Tablet in einem Zug ausgefüllt – und liefert genau das, womit ich weiterarbeite.</div>
-      </div>
-
-      <p class="proof-zentrale fade-in">Und darüber eine Ebene, die alles zusammenhält: eine Ordnung, die ich mir selbst gebaut habe. Strategie, Finanzen und Behördenkram laufen an einem Ort zusammen, und jedes Projekt darunter hat seinen klar abgegrenzten Platz. Nichts vermischt sich, nichts geht verloren.</p>
-
-      <p class="proof-closer fade-in">Ich habe dafür nicht programmieren gelernt. Ich habe gelernt, die <strong>richtigen Fragen zu stellen</strong> – und hartnäckig zu bleiben, bis etwas wirklich funktioniert. Genau das bringe ich in Ihr Unternehmen.</p>
-    </div>
-  </section>
-
-  <!-- ANGEBOT -->
-  <section class="angebot" id="fuer-unternehmen">
-    <div class="angebot-inner">
-      <p class="section-eyebrow fade-in">Für Unternehmen</p>
-      <h2 class="angebot-title fade-in">Ich schlage den Weg frei. Sie bauen ihn aus.</h2>
-      <p class="angebot-sub fade-in">In jedem Betrieb gibt es Abläufe, über die sich intern niemand mehr wundert – weil sie schon immer so waren. Von aussen sieht man sie sofort. Drei Wege, wie wir zusammenarbeiten können:</p>
-
-      <div class="angebot-einstieg fade-in">
-        <p><strong>Am Anfang steht ein Gespräch.</strong> 30 Minuten, kostenlos und unverbindlich – bei Ihnen, am Telefon oder per Video. Wir schauen gemeinsam, wo sich in Ihrem Betrieb ein genauerer Blick lohnt.</p>
-        <a href="#kontakt" class="angebot-einstieg-link">Erstgespräch vereinbaren →</a>
-      </div>
-
-      <div class="angebot-grid">
-        <div class="angebot-card fade-in">
-          <p class="angebot-step">Schritt 1</p>
-          <h3>Der Blick von aussen</h3>
-          <p>Ein halber Tag in Ihrem Betrieb. Wir gehen gemeinsam durch, was täglich Zeit frisst: Offerten, Rapporte, Terminplanung, Ablage, Mailflut.</p>
-          <p>Danach bekommen Sie eine geordnete Liste – was sich mit heutigen Mitteln vereinfachen lässt, was das jeweils bedeutet, und womit ich anfangen würde.</p>
-          <p class="angebot-meta">Fixpreis nach dem Erstgespräch · kein Folgeauftrag nötig</p>
-        </div>
-
-        <div class="angebot-card fade-in">
-          <p class="angebot-step">Schritt 2</p>
-          <h3>Prototyp statt Konzept</h3>
-          <p>Wir nehmen den Ablauf, der am meisten Ärger macht, und bauen die Lösung – nicht die Präsentation darüber.</p>
-          <p>Sie sehen in Tagen statt Monaten, ob es trägt. Was entsteht, gehört Ihnen und läuft auch ohne mich weiter.</p>
-          <p class="angebot-meta">Nach Aufwand · mit vereinbartem Kostendach</p>
-        </div>
-
-        <div class="angebot-card fade-in">
-          <p class="angebot-step">Schritt 3</p>
-          <h3>Ihr Team an Bord</h3>
-          <p>Ein Workshop für die Leute, die täglich damit arbeiten – an Ihren echten Aufgaben, nicht an Beispielen aus dem Lehrbuch.</p>
-          <p>Danach können sie es selbst, ohne bei jeder Kleinigkeit jemanden rufen zu müssen.</p>
-          <p class="angebot-meta">Halber oder ganzer Tag · in Ihren Räumen</p>
-        </div>
-      </div>
-
-      <p class="angebot-note fade-in">Kein Abo, keine Lizenz, kein Werkzeug, das Sie an mich bindet. Wenn Sie mich danach nicht mehr brauchen, habe ich meine Arbeit gut gemacht.</p>
-    </div>
-  </section>
-
   <!-- WORLDS -->
+
+  <!-- MANIFESTO -->
+  <section class="manifesto" id="manifesto">
+    <div class="manifesto-text fade-in">
+      <p>Es braucht immer jemanden, der mit der Machete durch den Dschungel vorangeht.<br>
+         Ich schlage den Weg frei. Sie bauen ihn aus.<br>
+         Was am Ende steht, hätte keiner allein geschafft.</p>
+    </div>
+  </section>
 
   <!-- PHOTO LINK -->
   <section class="photo-link-section">
@@ -752,12 +872,12 @@
 
   <!-- INVITATION -->
   <section class="invitation" id="kontakt">
-    <p class="invitation-closer fade-in">Wer einmal mit mir gearbeitet hat,<br>sieht die Dinge danach oft anders.</p>
+    <h2 class="invitation-headline fade-in">Haben Sie etwas,<br>das erzählt werden will?</h2>
     <p class="invitation-text fade-in">
-      Wenn Sie das Gefühl haben,<br>
-      dass in Ihrer Situation <strong>mehr möglich wäre</strong><br>
-      als bisher gedacht –<br>
-      dann sind wir wahrscheinlich füreinander gemacht.
+      Ein Film, eine Kampagne, ein Konzept –<br>
+      oder erst eine Idee, die noch keine Form hat.<br>
+      Beschreiben Sie in ein paar Sätzen, worum es geht.<br>
+      <strong>Ich melde mich persönlich.</strong>
     </p>
 
       <form class="kontakt-form fade-in" id="kontaktForm" action="https://api.web3forms.com/submit" method="POST">
@@ -780,10 +900,10 @@
         <input type="email" id="kf-mail" name="email" autocomplete="email" required>
       </div>
       <div class="kontakt-field">
-        <label for="kf-text">Worum geht es?</label>
-        <textarea id="kf-text" name="nachricht" placeholder="Erstgespräch" required></textarea>
+        <label for="kf-text">Ihr Anliegen</label>
+        <textarea id="kf-text" name="nachricht" placeholder="Worum geht es, bis wann, und was soll am Ende stehen?" required></textarea>
       </div>
-      <button type="submit" class="kontakt-submit">Nachricht senden</button>
+      <button type="submit" class="kontakt-submit">Anfrage senden</button>
       <p class="kontakt-status" id="kontaktStatus" role="status" aria-live="polite"></p>
       <p class="kontakt-hinweis">Ihre Angaben verwende ich ausschliesslich, um Ihre Anfrage zu beantworten. Näheres in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
     </form>
@@ -846,7 +966,7 @@
         }
         // Zeitfalle: ein ausgefülltes Formular in unter drei Sekunden ist kein Mensch.
         if (Date.now() - geladen < 3000) {
-          status.textContent = 'Einen kurzen Moment bitte – und dann nochmals auf «Nachricht senden».';
+          status.textContent = 'Einen kurzen Moment bitte – und dann nochmals auf «Anfrage senden».';
           return;
         }
 
@@ -862,7 +982,7 @@
           .then(d => {
             if (d && d.success) {
               form.reset();
-              status.textContent = 'Danke – Ihre Nachricht ist angekommen. Ich melde mich in der Regel innert eines Arbeitstages.';
+              status.textContent = 'Danke – Ihre Anfrage ist angekommen. Ich melde mich in der Regel innert eines Arbeitstages.';
             } else {
               status.textContent = FEHLER;
               button.disabled = false;
