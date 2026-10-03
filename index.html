@@ -207,9 +207,9 @@
     /* ===== EIGENPRODUKTIONEN (Band wie Referenzband, mit Slogan) ===== */
     @keyframes eigen-zyklus {
       0%     { opacity: 0;    transform: scale(0.8);  pointer-events: none; }
-      5%     { opacity: 0.9;  transform: scale(0.9);  pointer-events: auto; }
-      28%    { opacity: 0.9;  transform: scale(1.05); pointer-events: auto; }
-      33.3%  { opacity: 0;    transform: scale(1.12); pointer-events: none; }
+      7.5%   { opacity: 0.9;  transform: scale(0.9);  pointer-events: auto; }
+      42%    { opacity: 0.9;  transform: scale(1.05); pointer-events: auto; }
+      50%    { opacity: 0;    transform: scale(1.12); pointer-events: none; }
       100%   { opacity: 0;    transform: scale(1.12); pointer-events: none; }
     }
     .eigenband .referenzband-liste { flex-direction: column; align-items: center; gap: 1.1rem; }
@@ -226,12 +226,11 @@
       .eigenband .referenzband-liste.buehne a {
         justify-content: center;
         gap: 0.2rem;
-        animation: eigen-zyklus 24s linear infinite both;
+        animation: eigen-zyklus 16s linear infinite both;
       }
       .eigenband .eigen-slogan { font-size: clamp(0.8rem, 1.5vw, 1.05rem); }
       .eigenband .referenzband-liste.buehne a:nth-child(1) { animation-delay: 0s; }
       .eigenband .referenzband-liste.buehne a:nth-child(2) { animation-delay: 8s; }
-      .eigenband .referenzband-liste.buehne a:nth-child(3) { animation-delay: 16s; }
     }
 
     .manifesto-text {
@@ -703,7 +702,7 @@
         "@type": "Person",
         "@id": "https://baelli.com/#person",
         "name": "Markus Baelli",
-        "jobTitle": ["Storyteller", "Konzepter", "Medienproduzent", "Hypnosetherapeut"],
+        "jobTitle": ["Storyteller", "Konzepter", "Medienproduzent"],
         "url": "https://baelli.com/",
         "image": "https://baelli.com/images/markus-baelli-portrait.jpg",
         "address": {
@@ -714,8 +713,7 @@
         },
         "email": "info@baelli.com",
         "telephone": "+41565351543",
-        "knowsAbout": ["Storytelling", "Konzeptentwicklung", "Medienproduktion", "Videoproduktion", "Hypnosetherapie"],
-        "sameAs": ["https://hypnozoom.ch"]
+        "knowsAbout": ["Storytelling", "Konzeptentwicklung", "Medienproduktion", "Videoproduktion"]
       },
       {
         "@type": "ProfessionalService",
@@ -739,7 +737,7 @@
         "@id": "https://baelli.com/#website",
         "url": "https://baelli.com/",
         "name": "baelli.com Innovations",
-        "description": "Storytelling, Konzepte, Medienproduktion und Hypnosetherapie von Markus Baelli",
+        "description": "Storytelling, Konzepte und Medienproduktion von Markus Baelli",
         "inLanguage": "de-CH"
       }
     ]
@@ -763,7 +761,6 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html" class="active">Start</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="https://hypnozoom.ch" target="_blank" rel="noopener noreferrer">Hypnosetherapie</a></li>
       <li><a href="ueber-mich.html">Über mich</a></li>
     </ul>
   </nav>
@@ -802,14 +799,14 @@
   <section class="referenzband eigenband" aria-label="Eigenproduktionen">
     <p class="referenzband-label">Eigenproduktionen</p>
     <p class="referenzband-liste buehne">
-      <a href="https://expresswohnung.ch/" target="_blank" rel="noopener noreferrer"><span>ExpressWohnung</span><span class="eigen-slogan">Nachmieter finden. In 72 Stunden. Gratis.</span></a><a href="https://quizwheel.ch/" target="_blank" rel="noopener noreferrer"><span>QuizWheel</span><span class="eigen-slogan">Ein Rad, das Besucher zum Mitmachen bringt.</span></a><a href="https://hypnozoom.ch/" target="_blank" rel="noopener noreferrer"><span>HypnoZoom</span><span class="eigen-slogan">Hypnosetherapie, die Ihre Geschichte weiterschreibt.</span></a>
+      <a href="https://expresswohnung.ch/" target="_blank" rel="noopener noreferrer"><span>ExpressWohnung</span><span class="eigen-slogan">Nachmieter finden. In 72 Stunden. Gratis.</span></a><a href="https://quizwheel.ch/" target="_blank" rel="noopener noreferrer"><span>QuizWheel</span><span class="eigen-slogan">Ein Rad, das Besucher zum Mitmachen bringt.</span></a>
     </p>
   </section>
 
   <!-- PROOF -->
   <section class="worlds">
     <div class="worlds-inner">
-      <p class="antenna-bridge fade-in"><em>Ich arbeite an beidem. Drei Wege.</em></p>
+      <p class="antenna-bridge fade-in"><em>Ich arbeite an beidem.</em></p>
 
       <a href="portfolio.html" class="world-item fade-in">
         <span class="world-icon" aria-hidden="true">
@@ -820,18 +817,6 @@
         </span>
         <span class="world-title">Portfolio</span>
         <span class="world-desc">Zehntausend Stunden vor und hinter der Kamera. Eine Auswahl.</span>
-        <span class="world-arrow">→</span>
-      </a>
-
-      <a href="https://hypnozoom.ch" target="_blank" rel="noopener noreferrer" class="world-item fade-in">
-        <span class="world-icon" aria-hidden="true">
-          <svg width="24" height="24" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="22.7,75.1 20.4,80.6 21.2,85.8 27.1,87.2 33.1,88.1 39.0,89.2 44.9,90.0 50.8,90.8 54.7,87.2 56.5,81.7 62.0,78.9 68.0,79.8 73.9,80.2 79.8,78.1 80.6,72.6 80.6,67.2 81.2,61.7 82.2,56.2 86.9,51.1 84.9,45.7 80.2,40.2 78.0,34.7 77.8,29.2 76.7,23.8 74.3,18.3 69.2,12.8 63.3,9.2 57.3,6.8 51.4,5.3 45.5,4.5 39.6,4.5 33.7,5.5 27.8,7.2 21.8,9.8 15.9,14.5 11.4,20.0 8.8,25.5 7.6,30.9 7.1,36.4 7.8,41.9 9.4,47.4 12.2,52.8 16.5,58.3 22.4,62.5 28.4,64.3 34.3,64.7 40.2,63.2 46.1,60.2 51.8,55.3 56.1,49.8 59.4,44.3 61.4,38.9 62.4,33.4 62.0,27.9 58.6,22.6 52.7,21.3 46.7,24.2"/>
-            <polyline points="34.7,51.3 33.1,50.0 31.4,48.5 30.2,47.0 28.8,45.7 27.6,44.2 26.5,42.6 25.5,41.1 24.5,39.6 23.9,38.1 23.3,36.6 22.7,34.3 22.4,32.8 22.2,31.3 22.2,29.1 22.4,28.3 22.9,26.8 23.5,25.3 24.7,23.8 25.5,23.0 26.3,22.5 28.0,21.7 29.6,21.3 31.2,21.3 32.9,21.3 34.5,21.9 36.1,22.6 37.8,23.6 38.6,24.3 40.0,25.8 41.6,26.6 42.2,27.9 42.2,30.2 42.0,31.7"/>
-          </svg>
-        </span>
-        <span class="world-title">Hypnose&shy;therapie</span>
-        <span class="world-desc">Wir tragen Geschichten mit uns, die wir nie ausgesucht haben. In der Hypnose finden wir heraus, welche davon noch zu Ihnen gehören.</span>
         <span class="world-arrow">→</span>
       </a>
 
