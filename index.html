@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Storytelling, Ideen, Konzepte | Markus Baelli, Muri AG</title>
-  <meta name="description" content="Storytelling, Ideen, Konzepte: Markus Baelli entwickelt und produziert, was noch keinen Namen hat. Produktionen für bekannte Schweizer Firmen und Fernsehen.">
+  <title>Konzepte, Formate, Storytelling | Markus Baelli, Muri AG</title>
+  <meta name="description" content="Konzepte, Formate, Storytelling: Markus Baelli entwickelt und produziert, was noch keinen Namen hat. Produktionen für bekannte Schweizer Firmen und Fernsehen.">
   <link rel="stylesheet" href="style.css">
   <style>
     /* ===== HERO QUOTE ===== */
@@ -54,6 +54,26 @@
       margin-right: 0.5em;
     }
     .hero-content p.hero-fokus { flex-wrap: nowrap; white-space: nowrap; }
+    .hero-content p.hero-beispiele {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: baseline;
+      gap: 0.15em 0.6em;
+      font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      line-height: 1.3;
+      color: rgba(255,255,255,0.78);
+      margin: 0.9rem auto 0;
+      text-shadow: 0 2px 18px rgba(0,0,0,0.6);
+    }
+    .hero-beispiele span { white-space: nowrap; }
+    .hero-beispiele span + span::before {
+      content: "·";
+      color: var(--orange-light);
+      margin-right: 0.6em;
+    }
     .hero-trenner {
       width: 56px;
       height: 2px;
@@ -72,6 +92,8 @@
       .hero-content { padding-left: 1rem; padding-right: 1rem; }
       .hero-content p.hero-fokus { font-size: 4.9vw; gap: 0 0.35em; }
       .hero-fokus span + span::before { margin-right: 0.35em; }
+      .hero-content p.hero-beispiele { font-size: 3.4vw; gap: 0.1em 0.4em; letter-spacing: 0.01em; }
+      .hero-beispiele span + span::before { margin-right: 0.4em; }
       .hero-content p.hero-byline { letter-spacing: 0.08em; font-size: 0.68rem; white-space: nowrap; }
     }
 
@@ -207,9 +229,9 @@
     /* ===== EIGENPRODUKTIONEN (Band wie Referenzband, mit Slogan) ===== */
     @keyframes eigen-zyklus {
       0%     { opacity: 0;    transform: scale(0.8);  pointer-events: none; }
-      7.5%   { opacity: 0.9;  transform: scale(0.9);  pointer-events: auto; }
-      42%    { opacity: 0.9;  transform: scale(1.05); pointer-events: auto; }
-      50%    { opacity: 0;    transform: scale(1.12); pointer-events: none; }
+      5.5%   { opacity: 0.9;  transform: scale(0.9);  pointer-events: auto; }
+      27.5%  { opacity: 0.9;  transform: scale(1.05); pointer-events: auto; }
+      33.3%  { opacity: 0;    transform: scale(1.12); pointer-events: none; }
       100%   { opacity: 0;    transform: scale(1.12); pointer-events: none; }
     }
     .eigenband .referenzband-liste { flex-direction: column; align-items: center; gap: 1.1rem; }
@@ -226,11 +248,12 @@
       .eigenband .referenzband-liste.buehne a {
         justify-content: center;
         gap: 0.2rem;
-        animation: eigen-zyklus 16s linear infinite both;
+        animation: eigen-zyklus 18s linear infinite both;
       }
       .eigenband .eigen-slogan { font-size: clamp(0.8rem, 1.5vw, 1.05rem); }
       .eigenband .referenzband-liste.buehne a:nth-child(1) { animation-delay: 0s; }
-      .eigenband .referenzband-liste.buehne a:nth-child(2) { animation-delay: 8s; }
+      .eigenband .referenzband-liste.buehne a:nth-child(2) { animation-delay: 6s; }
+      .eigenband .referenzband-liste.buehne a:nth-child(3) { animation-delay: 12s; }
     }
 
     .manifesto-text {
@@ -684,15 +707,15 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://baelli.com/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Storytelling, Ideen, Konzepte | Markus Baelli, Muri AG">
-  <meta property="og:description" content="Storytelling, Ideen, Konzepte: Markus Baelli entwickelt und produziert, was noch keinen Namen hat. Produktionen für bekannte Schweizer Firmen und Fernsehen.">
+  <meta property="og:title" content="Konzepte, Formate, Storytelling | Markus Baelli, Muri AG">
+  <meta property="og:description" content="Konzepte, Formate, Storytelling: Markus Baelli entwickelt und produziert, was noch keinen Namen hat. Produktionen für bekannte Schweizer Firmen und Fernsehen.">
   <meta property="og:url" content="https://baelli.com/">
   <meta property="og:image" content="https://baelli.com/images/markus-baelli-portrait.jpg">
   <meta property="og:locale" content="de_CH">
   <meta property="og:site_name" content="baelli.com Innovations">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Storytelling, Ideen, Konzepte | Markus Baelli, Muri AG">
-  <meta name="twitter:description" content="Storytelling, Ideen, Konzepte: Markus Baelli entwickelt und produziert, was noch keinen Namen hat. Produktionen für bekannte Schweizer Firmen und Fernsehen.">
+  <meta name="twitter:title" content="Konzepte, Formate, Storytelling | Markus Baelli, Muri AG">
+  <meta name="twitter:description" content="Konzepte, Formate, Storytelling: Markus Baelli entwickelt und produziert, was noch keinen Namen hat. Produktionen für bekannte Schweizer Firmen und Fernsehen.">
   <meta name="twitter:image" content="https://baelli.com/images/markus-baelli-portrait.jpg">
   <script type="application/ld+json">
   {
@@ -719,7 +742,7 @@
         "@type": "ProfessionalService",
         "@id": "https://baelli.com/#service",
         "name": "baelli.com Innovations",
-        "description": "Storytelling, Ideen und Konzepte: entwickeln und umsetzen, von Film und Kampagne bis zur Produktion.",
+        "description": "Konzepte, Formate und Storytelling: entwickeln und umsetzen, von Film und Kampagne bis zur Produktion.",
         "url": "https://baelli.com/",
         "founder": { "@id": "https://baelli.com/#person" },
         "email": "info@baelli.com",
@@ -774,7 +797,8 @@
     </video>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-fokus"><span>Storytelling</span><span>Ideen</span><span>Konzepte</span></p>
+      <p class="hero-fokus"><span>Konzepte</span><span>Formate</span><span>Storytelling</span></p>
+      <p class="hero-beispiele"><span>Videoserien</span><span>Podcast-Reihen</span><span>Social-Rubriken</span></p>
       <div class="hero-trenner" aria-hidden="true"></div>
       <p class="hero-byline">Markus Baelli &nbsp;·&nbsp; Muri AG &nbsp;·&nbsp; Schweiz</p>
       <h1 class="hero-quote">Im Rauschen ist <em>alles möglich.</em></h1>
@@ -799,7 +823,7 @@
   <section class="referenzband eigenband" aria-label="Eigenproduktionen">
     <p class="referenzband-label">Eigenproduktionen</p>
     <p class="referenzband-liste buehne">
-      <a href="https://expresswohnung.ch/" target="_blank" rel="noopener noreferrer"><span>ExpressWohnung</span><span class="eigen-slogan">Nachmieter finden. In 72 Stunden. Gratis.</span></a><a href="https://quizwheel.ch/" target="_blank" rel="noopener noreferrer"><span>QuizWheel</span><span class="eigen-slogan">Ein Rad, das Besucher zum Mitmachen bringt.</span></a>
+      <a href="https://expresswohnung.ch/" target="_blank" rel="noopener noreferrer"><span>ExpressWohnung</span><span class="eigen-slogan">Nachmieter finden. In 72 Stunden. Gratis.</span></a><a href="https://quizwheel.ch/" target="_blank" rel="noopener noreferrer"><span>QuizWheel</span><span class="eigen-slogan">Ein Rad, das Besucher zum Mitmachen bringt.</span></a><a href="https://www.youtube.com/@WasserstoffTV/videos" target="_blank" rel="noopener noreferrer"><span>wasserstoff.TV</span><span class="eigen-slogan">Wasserstoff, Energie, Innovation – im Video-Podcast.</span></a>
     </p>
   </section>
 
