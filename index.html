@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Konzepte, Formate, Storytelling | Markus Baelli, Muri AG</title>
@@ -92,8 +93,8 @@
       .hero-content { padding-left: 1rem; padding-right: 1rem; }
       .hero-content p.hero-fokus { font-size: 4.9vw; gap: 0 0.35em; }
       .hero-fokus span + span::before { margin-right: 0.35em; }
-      .hero-content p.hero-beispiele { font-size: 3.4vw; gap: 0.1em 0.4em; letter-spacing: 0.01em; }
-      .hero-beispiele span + span::before { margin-right: 0.4em; }
+      .hero-content p.hero-beispiele { font-size: 2.75vw; gap: 0.1em 0.3em; letter-spacing: 0; }
+      .hero-beispiele span + span::before { margin-right: 0.3em; }
       .hero-content p.hero-byline { letter-spacing: 0.08em; font-size: 0.68rem; white-space: nowrap; }
     }
 
@@ -476,7 +477,7 @@
     }
     .world-item {
       display: grid;
-      grid-template-columns: 30px 260px 1fr 30px;
+      grid-template-columns: 30px minmax(260px, 38%) 1fr 30px;
       align-items: center;
       gap: 2rem;
       padding: 2.2rem 0;
@@ -702,7 +703,36 @@
       .proof-item { grid-template-columns: 1fr; gap: 0.7rem; }
       .kontakt-row { grid-template-columns: 1fr; }
     }
-  </style>
+  
+    /* VORSCHAU Apps: immer vier in einer Reihe, auch am Handy */
+    .apps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:auto auto auto auto;column-gap:clamp(.4rem,2.5vw,3rem);row-gap:clamp(.25rem,.8vw,.5rem);align-items:start;margin:.6rem auto 1.4rem;max-width:1000px}
+    .app{display:grid;grid-row:span 4;grid-template-rows:subgrid;justify-items:center;align-items:start;min-width:0;text-align:center}
+    .app>.app-icon{grid-row:1}.app>.app-name{grid-row:2}.app>.app-sub{grid-row:3}.app>.badges{grid-row:4}
+    .app-icon{display:block;width:min(96px,100%);aspect-ratio:1/1;border-radius:22%;overflow:hidden;background:#222;text-decoration:none}
+    .app-icon img{display:block;width:100%;height:100%}
+    .app-name{font-size:clamp(.62rem,2.5vw,1.15rem);font-weight:400;color:var(--white);line-height:1.15;hyphens:manual}
+    .app-sub{font-size:clamp(.5rem,1.7vw,.85rem);font-weight:300;color:rgba(255,255,255,.7);line-height:1.25}
+    .badge-img{display:block;width:100%;max-width:150px;aspect-ratio:3/1;box-sizing:border-box}
+    .badge-img img{display:block;width:100%;height:100%}
+    .badge-img.google{aspect-ratio:811/241;width:calc(100% * 1.1217);max-width:calc(150px * 1.1217);background:none;padding:0;border-radius:0}
+    .badge-img.google img{display:block;width:100%;height:100%}
+    @media (max-width:480px){.eigenband .referenzband-label{letter-spacing:.14em;font-size:.62rem}}
+    @media (max-width:360px){.eigenband .referenzband-label{letter-spacing:.08em;font-size:.58rem}}
+    /* Handy: zwei Apps pro Zeile, Geschichten lesbar, Badges mindestens 40 px hoch */
+    @media (max-width:600px){
+      .apps{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(8,auto);column-gap:1rem;row-gap:.4rem;max-width:420px;padding:0 .2rem}
+      .app:nth-child(n+3)>.app-icon{margin-top:1.6rem}
+      .app-icon{width:min(88px,100%)}
+      .app-name{font-size:1.05rem}
+      .app-sub{font-size:.82rem;line-height:1.35}
+      .badge-img{max-width:150px}
+      .badges .badge.demnaechst{font-size:.78rem;max-width:150px;line-height:1.2}
+    }
+    .badges{display:flex;flex-direction:column;align-items:center;gap:clamp(.25rem,.8vw,.5rem);width:100%;margin-top:.1rem}
+    .badge{display:flex;flex-direction:column;justify-content:center;width:100%;max-width:150px;aspect-ratio:3.4/1;border:1px solid #a6a6a6;border-radius:clamp(4px,1vw,8px);background:#000;color:#fff;text-decoration:none;text-align:left;padding:0 6%;font-size:clamp(.5rem,2.3vw,1rem);line-height:1.05;box-sizing:border-box}
+    .badge small{font-size:.58em;opacity:.85}
+    .badge.demnaechst{border-style:dashed;border-color:rgba(255,255,255,.4);background:transparent;color:rgba(255,255,255,.75);font-size:clamp(.42rem,1.9vw,.85rem);text-align:center;align-items:center;aspect-ratio:3/1;padding:0 .2em;box-sizing:border-box;max-width:150px}
+    </style>
   <meta name="google-site-verification" content="P6n1_zVhU4MIwN9poVW1xoypxf4h9SmWYmA_CE-PF7g">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://baelli.com/">
@@ -798,7 +828,7 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <p class="hero-fokus"><span>Konzepte</span><span>Formate</span><span>Storytelling</span></p>
-      <p class="hero-beispiele"><span>Videoserien</span><span>Podcast-Reihen</span><span>Social-Rubriken</span></p>
+      <p class="hero-beispiele"><span>Videoserien</span><span>Podcast-Reihen</span><span>Social-Rubriken</span><span>Apps</span></p>
       <div class="hero-trenner" aria-hidden="true"></div>
       <p class="hero-byline">Markus Baelli &nbsp;·&nbsp; Muri AG &nbsp;·&nbsp; Schweiz</p>
       <h1 class="hero-quote">Im Rauschen ist <em>alles möglich.</em></h1>
@@ -816,21 +846,53 @@
 
   <!-- ZWISCHENSATZ -->
   <section class="satz-weiss">
-    <p class="fade-in">Schreibt das Leben die Geschichte – oder die Geschichte das Leben?</p>
+    <p class="fade-in">Andere Formate. Andere Geschichten.</p>
   </section>
 
-  <!-- EIGENPRODUKTIONEN -->
-  <section class="referenzband eigenband" aria-label="Eigenproduktionen">
-    <p class="referenzband-label">Eigenproduktionen</p>
-    <p class="referenzband-liste buehne">
-      <a href="https://expresswohnung.ch/" target="_blank" rel="noopener noreferrer"><span>ExpressWohnung</span><span class="eigen-slogan">Nachmieter finden. In 72 Stunden. Gratis.</span></a><a href="https://quizwheel.ch/" target="_blank" rel="noopener noreferrer"><span>QuizWheel</span><span class="eigen-slogan">Ein Rad, das Besucher zum Mitmachen bringt.</span></a><a href="https://www.youtube.com/@WasserstoffTV/videos" target="_blank" rel="noopener noreferrer"><span>wasserstoff.TV</span><span class="eigen-slogan">Wasserstoff, Energie, Innovation – im Video-Podcast.</span></a>
-    </p>
+  <!-- EIGENPRODUKTIONEN (VORSCHAU: Apps statisch + Band mit zwei Einträgen) -->
+  <section class="referenzband eigenband" aria-label="Hinter jeder App steckt eine Geschichte">
+    <p class="referenzband-label">Hinter jeder App steckt eine Geschichte</p>
+    <div class="apps">
+      <div class="app">
+        <a class="app-icon" href="https://expresswohnung.ch/" target="_blank" rel="noopener noreferrer" aria-label="ExpressWohnung"><img src="images/app-expresswohnung.jpg" width="96" height="96" alt="ExpressWohnung – App-Icon" loading="lazy" style="display:block;width:100%;height:100%"></a>
+        <span class="app-name">Express&shy;Wohnung</span>
+        <span class="app-sub">Früher ausziehen? Nachmieter finden in 72 Stunden – gratis, ohne Anmeldung.</span>
+        <span class="badges">
+          <a class="badge-img" href="https://apps.apple.com/ch/app/expresswohnung/id6761208372" target="_blank" rel="noopener noreferrer"><img src="images/badge-apple-schwarz.png" width="120" height="40" alt="Laden im App Store"></a>
+          <a class="badge-img google" href="https://play.google.com/store/apps/details?id=ch.expresswohnung.app" target="_blank" rel="noopener noreferrer"><img src="images/badge-google-play.png" width="135" height="40" alt="Jetzt bei Google Play"></a>
+        </span>
+      </div>
+      <div class="app">
+        <a class="app-icon" href="https://apps.apple.com/ch/app/subzoom-reise-nach-innen/id6827326550" target="_blank" rel="noopener noreferrer" aria-label="Subzoom"><img src="images/app-subzoom.jpg" width="96" height="96" alt="Subzoom – App-Icon" loading="lazy" style="display:block;width:100%;height:100%"></a>
+        <span class="app-name">Subzoom</span>
+        <span class="app-sub">Ein U-Boot taucht mit dir ab: weg vom Alltagslärm, tiefer zur inneren Ruhe.</span>
+        <span class="badges">
+          <a class="badge-img" href="https://apps.apple.com/ch/app/subzoom-reise-nach-innen/id6827326550" target="_blank" rel="noopener noreferrer"><img src="images/badge-apple-schwarz.png" width="120" height="40" alt="Laden im App Store"></a>
+        </span>
+      </div>
+      <div class="app">
+        <a class="app-icon" href="https://apps.apple.com/ch/app/simulation-viewer/id6824039790" target="_blank" rel="noopener noreferrer" aria-label="Simulation Viewer"><img src="images/app-simulation-viewer.jpg" width="96" height="96" alt="Simulation Viewer – App-Icon" loading="lazy" style="display:block;width:100%;height:100%"></a>
+        <span class="app-name">Simulation Viewer</span>
+        <span class="app-sub">Folge dem Kaninchen: Spass-Foto-App, die deine Welt als leuchtenden Code zeigt.</span>
+        <span class="badges">
+          <a class="badge-img" href="https://apps.apple.com/ch/app/simulation-viewer/id6824039790" target="_blank" rel="noopener noreferrer"><img src="images/badge-apple-schwarz.png" width="120" height="40" alt="Laden im App Store"></a>
+        </span>
+      </div>
+      <div class="app">
+        <span class="app-icon"><img src="images/app-whooba76.jpg" width="96" height="96" alt="Whooba76 – App-Icon" loading="lazy" style="display:block;width:100%;height:100%"></span>
+        <span class="app-name">Whooba76</span>
+        <span class="app-sub">Zeitreise-Radiowecker: sanft geweckt mit der Musik deiner Jugend.</span>
+        <span class="badges">
+          <span class="badge demnaechst">Demnächst<br>im App Store</span>
+          <span class="badge demnaechst">Demnächst<br>bei Google Play</span>
+        </span>
+      </div>
+    </div>
   </section>
 
   <!-- PROOF -->
   <section class="worlds">
     <div class="worlds-inner">
-      <p class="antenna-bridge fade-in"><em>Ich arbeite an beidem.</em></p>
 
       <a href="portfolio.html" class="world-item fade-in">
         <span class="world-icon" aria-hidden="true">
@@ -839,8 +901,8 @@
             <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l-.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
           </svg>
         </span>
-        <span class="world-title">Portfolio</span>
-        <span class="world-desc">Zehntausend Stunden vor und hinter der Kamera. Eine Auswahl.</span>
+        <span class="world-title">Weitere Formate. Weitere Geschichten.</span>
+        <span class="world-desc">Zum Portfolio: zehntausend Stunden vor und hinter der Kamera. Eine Auswahl.</span>
         <span class="world-arrow">→</span>
       </a>
 
